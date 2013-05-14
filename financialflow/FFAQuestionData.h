@@ -21,6 +21,10 @@
 @property (strong) NSNumber *answer3Value;
 @property (strong) NSString *answer4Text;
 @property (strong) NSNumber *answer4Value;
+@property (strong) NSString *answer5Text;
+@property (strong) NSNumber *answer5Value;
 @property (strong) NSString *tip;
+
++ (id) questionWithText:(NSString*)inQuestionText idofQ:(NSNumber*)inQID categoryID:(NSNumber*)inCatID answer1Text:(NSString*)inAnswer1Text answer1Value:(NSNumber*)inAnswer1Value answer2Text:(NSString*)inAnswer2Text answer2Value:(NSNumber*)inAnswer2Value answer3Text:(NSString*)inAnswer3Text answer3Value:(NSNumber*)inAnswer3Value answer4Text:(NSString*)inAnswer4Text answer4Value:(NSNumber*)inAnswer4Value answer5Text:(NSString*)inAnswer5Text answer5Value:(NSNumber*)inAnswer5Value andATip:(NSString*)inTip;
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FFAPlayer.h"
+#import "FFAQuestionData.h"
 
 @interface FFAGameViewController : UIViewController {
     IBOutlet UIView *questionsView;
@@ -16,6 +17,7 @@
     IBOutlet UIButton *answer2Button;
     IBOutlet UIButton *answer3Button;
     IBOutlet UIButton *answer4Button;
+    IBOutlet UIButton *answer5Button;
     
     IBOutlet UIButton *continueButton;
     IBOutlet UILabel *tipsTextLabel;
