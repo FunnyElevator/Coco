@@ -16,27 +16,22 @@
 
 #pragma maark - main start functions
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    
-    
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    questionTitleLabel.font = [UIFont fontWithName:@"Trade Winds" size:18];
+    questionCatLabel.font = [UIFont fontWithName:@"Trade Winds" size:20];
+    questionTextLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:13];
     
     answer1Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
     answer2Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
     answer3Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
     answer4Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
+    answer5Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
+    menuButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:18];
+    continueButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:20];
+    
     answer1Button.titleLabel.text = @"Hello";
     
     self.questionaireData = [NSMutableArray array];
@@ -99,12 +94,120 @@
     
     if (playerData.currentQuestion < 100) {
         [self showComicstrip];
+    } else {
+        [self showQuestion];
+    }
+    [self setupGameField];
+}
+
+- (void)showComicstrip {
+    comicButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:24];
+    [comicView setHidden:NO];
+    [UIImageView animateWithDuration:0.5f
+                               delay:0.5f
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicImg1 setAlpha:1.0f];
+                          }
+                          completion:nil];
+    [UIImageView animateWithDuration:0.5f
+                               delay:1.5f
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicImg2 setAlpha:1.0f];
+                          }
+                          completion:nil];
+    [UIImageView animateWithDuration:0.5f
+                               delay:2.5f
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicImg3 setAlpha:1.0f];
+                          }
+                          completion:nil];
+    [UIImageView animateWithDuration:0.5f
+                               delay:3.5f
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicImg4 setAlpha:1.0f];
+                          }
+                          completion:nil];
+    [UIImageView animateWithDuration:0.5f
+                               delay:4.5f
+                             options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicImg5 setAlpha:1.0f];
+                          }
+                          completion:nil];
+    [UIButton animateWithDuration:0.5f
+                            delay:5.5f
+                          options:UIViewAnimationOptionCurveEaseInOut
+                          animations:^{
+                              [comicButton setAlpha:1.0f];
+                              [comicButton setEnabled:YES];
+                          }
+                          completion:nil];
+}
+
+- (IBAction)finishComic:(id)sender {
+    //[comicView setHidden:YES];
+    [UIView animateWithDuration:0.5f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [comicView setAlpha:0.0f];
+                     }
+                     completion:^(BOOL finished){
+                         [comicView setHidden:YES];
+                         [comicView setAlpha:1.0f];
+                         [comicImg1 setAlpha:0.0f];
+                         [comicImg2 setAlpha:0.0f];
+                         [comicImg3 setAlpha:0.0f];
+                         [comicImg4 setAlpha:0.0f];
+                         [comicImg5 setAlpha:0.0f];
+                         [comicButton setAlpha:0.0f];
+                         [comicButton setEnabled:NO];
+                     }];
+    [self showQuestion];                         
+    
+    
+    
+}
+- (void)setupGameField {
+    int i=0;
+    if (i<100) {
+        [portImage setImage:[UIImage imageNamed:@"port1.png"]];
+        [islandImage setImage:[UIImage imageNamed:@"island1.png"]];
+        questionCatLabel.text = @"<#string#>";
     }
 }
-- (void)showComicstrip {
+
+- (void)showQuestion {
+    [self enableAllButtons];
     
 }
 
+- (void)questionAnswered {
+    
+}
+- (IBAction)continueAfterQuestion:(id)sender {
+ 
+}
+
+- (void)disableAllButtons {
+    answer1Button.enabled = NO;
+    answer2Button.enabled = NO;
+    answer3Button.enabled = NO;
+    answer4Button.enabled = NO;
+    answer5Button.enabled = NO;
+}
+
+- (void)enableAllButtons {
+    answer1Button.enabled = YES;
+    answer2Button.enabled = YES;
+    answer3Button.enabled = YES;
+    answer4Button.enabled = YES;
+    answer5Button.enabled = YES;
+}
 
 +(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{
     NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
@@ -124,9 +227,8 @@
 
 #pragma mark - question answering
 
-- (IBAction)continueAfterQuestion:(id)sender {
-    
-}
+
+
 
 
 @end
