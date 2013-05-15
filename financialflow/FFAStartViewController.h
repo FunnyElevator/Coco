@@ -11,8 +11,8 @@
 
 @interface FFAStartViewController : UIViewController
 
-@property (strong) FFAPlayer *playerData;
+//@property (strong) FFAPlayer *playerData;
 
 - (IBAction)shareApp:(id)sender;
-
++ (FFAStartViewController *) sharedInstance;
 @end

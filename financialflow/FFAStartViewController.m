@@ -22,6 +22,8 @@
 
 @end
 
+static FFAStartViewController *playerData;
+
 @implementation FFAStartViewController
 
 - (void)viewDidLoad
@@ -44,14 +46,29 @@
         //initialize user data
     }
      */
-    
+    /*
     CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
     NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
     CFRelease(newUniqueId);
     
     NSLog(@"UUIDthing: %@", uuidString);
+     
+     */
+    
+    FFAPlayer *playerdata = [FFAPlayer sharedPlayer];
+    
+    playerdata.name = @"hello";
 }
-
++ (FFAStartViewController *) sharedInstance
+{
+    if( playerData == nil)
+    {
+        playerData = [[FFAStartViewController alloc]init];
+    }
+    
+    return playerData;
+    
+}
 - (IBAction)resetGame:(id)sender {
     NSLog(@"resetGamw");
 }

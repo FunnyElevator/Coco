@@ -16,15 +16,15 @@ typedef enum {
 
 
 @interface FFAPlayer : NSObject {
-    NSString *_name;
-    int _age;
-    PLGender _gender;
-    bool _unlockedLevelTwo;
-    bool _unlockedLevelThree;
-    bool _unlockedLevelFour;
-    int _currentQuestion;
-    NSMutableArray *_answerValues;
-    NSString *_deviceID;
+    NSString *name;
+    int age;
+    PLGender gender;
+    bool unlockedLevelTwo;
+    bool unlockedLevelThree;
+    bool unlockedLevelFour;
+    int currentQuestion;
+    NSMutableArray *answerValues;
+    NSString *deviceID;
 }
 
 @property (nonatomic, readwrite) NSString *name;
@@ -37,13 +37,7 @@ typedef enum {
 @property (nonatomic, readwrite) NSMutableArray *answerValues;
 @property (nonatomic, readwrite) NSString *deviceID;
 
-- (id)initWithDeviceID:(NSString *)deviceID;
-//- (void)firstIslandFinished:(int)islandNumberFinished;
-- (void)setGender:(PLGender)gender;
-- (void)setAge:(int)age;
-- (void)setCurrentQuestion:(int)currentQuestion;
-- (void)setName:(NSString *)name;
-- (void)addAnswerValuesObject:(NSString *)answerValue;
 
++ (id)sharedPlayer;
 
 @end

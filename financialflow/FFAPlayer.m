@@ -10,58 +10,49 @@
 
 @implementation FFAPlayer
 
-@synthesize name = _name;
-@synthesize age = _age;
-@synthesize gender = _gender;
-@synthesize unlockedLevelTwo = _unlockedLevelTwo;
-@synthesize unlockedLevelThree = _unlockedLevelThree;
-@synthesize unlockedLevelFour = _unlockedLevelFour;
-@synthesize currentQuestion = _currentQuestion;
-@synthesize answerValues = _answerValues;
-@synthesize deviceID = _deviceID;
+@synthesize name;
+@synthesize age;
+@synthesize gender;
+@synthesize unlockedLevelTwo;
+@synthesize unlockedLevelThree;
+@synthesize unlockedLevelFour;
+@synthesize currentQuestion;
+@synthesize answerValues;
+@synthesize deviceID;
 
-- (id)initWithDeviceID:(NSString *)deviceID {
-      
-    FFAPlayer *ffaPlayer = [[FFAPlayer alloc] init];
-    
-    ffaPlayer.name = @"";
-    ffaPlayer.age = 0;
-    ffaPlayer.gender = UnKnown;
-    ffaPlayer.unlockedLevelTwo = NO;
-    ffaPlayer.unlockedLevelThree = NO;
-    ffaPlayer.unlockedLevelFour = NO;
-    ffaPlayer.currentQuestion = 0;
-    //self.answerValues = [NSMutableArray initialize];
-    ffaPlayer.deviceID = deviceID;
-    
-    
+#pragma mark Singleton Methods
+
++ (id)sharedPlayer {
+    static FFAPlayer *sharedMyPlayer = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyPlayer = [[self alloc] init];
+    });
+    return sharedMyPlayer;
+}
+
+- (id)init {
+    if (self = [super init]) {
+        name = @"Me";
+        age = 0;
+        gender = UnKnown;
+        unlockedLevelTwo = NO;
+        unlockedLevelThree = NO;
+        unlockedLevelFour = NO;
+        currentQuestion = 0;
+        answerValues = [[NSMutableArray alloc] init];
+        
+        CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
+        NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
+        CFRelease(newUniqueId);
+        
+        deviceID = uuidString;
+    }
     return self;
 }
-/*
-- (void)firstIslandFinished:(int)islandNumberFinished {
-    if (islandNumberFinished == 1) {
-        self.unlockedLevelTwo = YES;
-    } else if (islandNumberFinished == 2) {
-        self.unlockedLevelThree = YES;
-    } else if (islandNumberFinished == 3) {
-        self.unlockedLevelFour = YES;
-    }
-    
+
+- (void)dealloc {
+    // Should never be called, but just here for clarity really.
 }
- */
-- (void)setGender:(PLGender)gender{
-    
-}
-- (void)setAge:(int)age{
-    
-}
-- (void)setCurrentQuestion:(int)currentQuestion{
-    
-}
-- (void)setName:(NSString *)name{
-    
-}
-- (void)addAnswerValuesObject:(NSString *)answerValue{
-    
-}
+
 @end

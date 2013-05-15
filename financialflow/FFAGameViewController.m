@@ -90,6 +90,10 @@
         //NSLog(@"Event added with ID: %@",newEvent.idNumber);
      
     }
+    
+    FFAPlayer *playerdata = [FFAPlayer sharedPlayer];
+    
+    NSLog(@"Playername: %@", playerdata.name);
 }
 
 +(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{
