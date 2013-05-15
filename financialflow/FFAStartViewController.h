@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FFAPlayer.h"
 
-@interface FFAStartViewController : UIViewController
-
-//@property (strong) FFAPlayer *playerData;
+@interface FFAStartViewController : UIViewController 
 
 - (IBAction)shareApp:(id)sender;
-+ (FFAStartViewController *) sharedInstance;
+//+ (FFAStartViewController *) sharedInstance;
 @end

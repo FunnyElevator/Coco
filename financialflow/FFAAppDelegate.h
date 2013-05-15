@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FFAPlayer.h"
 
 @interface FFAAppDelegate : UIResponder <UIApplicationDelegate> 
 

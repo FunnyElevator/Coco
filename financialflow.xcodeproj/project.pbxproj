@@ -30,6 +30,17 @@
 		1F7236CF1713FE3500349A34 /* FFAGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7236CE1713FE3500349A34 /* FFAGameViewController.m */; };
 		1F8348DF17425AAD00B25115 /* FFAQuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8348DE17425AAD00B25115 /* FFAQuestionData.m */; };
 		1F8348E11742C3EF00B25115 /* questions_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F8348E01742C3EF00B25115 /* questions_data.json */; };
+		1F8348E41743ACE800B25115 /* info-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8348E21743ACE500B25115 /* info-bg.png */; };
+		1F8348E51743ACE800B25115 /* info-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8348E31743ACE600B25115 /* info-bg@2x.png */; };
+		1F955DC91743F19D0083C6F4 /* main-level-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DC71743F19D0083C6F4 /* main-level-closed.png */; };
+		1F955DCA1743F19D0083C6F4 /* main-level-closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DC81743F19D0083C6F4 /* main-level-closed@2x.png */; };
+		1F955DCD17440B0A0083C6F4 /* diploma-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DCB17440B080083C6F4 /* diploma-bg.png */; };
+		1F955DCE17440B0A0083C6F4 /* diploma-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DCC17440B0A0083C6F4 /* diploma-bg@2x.png */; };
+		1F955DD117440D350083C6F4 /* FFADiplomaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F955DD017440D350083C6F4 /* FFADiplomaViewController.m */; };
+		1F955DD4174416D20083C6F4 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DD2174416D20083C6F4 /* Icon-72.png */; };
+		1F955DD5174416D20083C6F4 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DD3174416D20083C6F4 /* Icon-72@2x.png */; };
+		1F955DD7174416D80083C6F4 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DD6174416D80083C6F4 /* Icon-72.png */; };
+		1F955DD9174416E60083C6F4 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F955DD8174416E60083C6F4 /* Icon-72@2x.png */; };
 		1FB32F51170D9F9E00E6FEC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB32F50170D9F9E00E6FEC6 /* UIKit.framework */; };
 		1FB32F53170D9F9E00E6FEC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB32F52170D9F9E00E6FEC6 /* Foundation.framework */; };
 		1FB32F55170D9F9E00E6FEC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB32F54170D9F9E00E6FEC6 /* CoreGraphics.framework */; };
@@ -90,6 +101,18 @@
 		1F8348DD17425AAD00B25115 /* FFAQuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAQuestionData.h; sourceTree = "<group>"; };
 		1F8348DE17425AAD00B25115 /* FFAQuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAQuestionData.m; sourceTree = "<group>"; };
 		1F8348E01742C3EF00B25115 /* questions_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = questions_data.json; path = Data/questions_data.json; sourceTree = "<group>"; };
+		1F8348E21743ACE500B25115 /* info-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-bg.png"; path = "graphics/info-bg.png"; sourceTree = "<group>"; };
+		1F8348E31743ACE600B25115 /* info-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-bg@2x.png"; path = "graphics/info-bg@2x.png"; sourceTree = "<group>"; };
+		1F955DC71743F19D0083C6F4 /* main-level-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main-level-closed.png"; path = "graphics/main-level-closed.png"; sourceTree = "<group>"; };
+		1F955DC81743F19D0083C6F4 /* main-level-closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main-level-closed@2x.png"; path = "graphics/main-level-closed@2x.png"; sourceTree = "<group>"; };
+		1F955DCB17440B080083C6F4 /* diploma-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "diploma-bg.png"; path = "graphics/diploma-bg.png"; sourceTree = "<group>"; };
+		1F955DCC17440B0A0083C6F4 /* diploma-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "diploma-bg@2x.png"; path = "graphics/diploma-bg@2x.png"; sourceTree = "<group>"; };
+		1F955DCF17440D350083C6F4 /* FFADiplomaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFADiplomaViewController.h; sourceTree = "<group>"; };
+		1F955DD017440D350083C6F4 /* FFADiplomaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFADiplomaViewController.m; sourceTree = "<group>"; };
+		1F955DD2174416D20083C6F4 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "graphics/Icon-72.png"; sourceTree = "<group>"; };
+		1F955DD3174416D20083C6F4 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "graphics/Icon-72@2x.png"; sourceTree = "<group>"; };
+		1F955DD6174416D80083C6F4 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		1F955DD8174416E60083C6F4 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		1FB32F4D170D9F9E00E6FEC6 /* financialflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financialflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB32F50170D9F9E00E6FEC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FB32F52170D9F9E00E6FEC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +176,8 @@
 		1FB32F44170D9F9E00E6FEC6 = {
 			isa = PBXGroup;
 			children = (
+				1F955DD8174416E60083C6F4 /* Icon-72@2x.png */,
+				1F955DD6174416D80083C6F4 /* Icon-72.png */,
 				1FB32F56170D9F9E00E6FEC6 /* financialflow */,
 				1FB32F4F170D9F9E00E6FEC6 /* Frameworks */,
 				1FB32F4E170D9F9E00E6FEC6 /* Products */,
@@ -217,6 +242,14 @@
 		1FD747221732873F008B38DA /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				1F955DD2174416D20083C6F4 /* Icon-72.png */,
+				1F955DD3174416D20083C6F4 /* Icon-72@2x.png */,
+				1F955DCB17440B080083C6F4 /* diploma-bg.png */,
+				1F955DCC17440B0A0083C6F4 /* diploma-bg@2x.png */,
+				1F955DC71743F19D0083C6F4 /* main-level-closed.png */,
+				1F955DC81743F19D0083C6F4 /* main-level-closed@2x.png */,
+				1F8348E21743ACE500B25115 /* info-bg.png */,
+				1F8348E31743ACE600B25115 /* info-bg@2x.png */,
 				1FBA36001740FBD200621A20 /* comic-continue.png */,
 				1FBA36011740FBD300621A20 /* comic-continue@2x.png */,
 				1FBA36021740FBD300621A20 /* comic1.png */,
@@ -266,6 +299,8 @@
 				1F7236CE1713FE3500349A34 /* FFAGameViewController.m */,
 				1FB32F6B170D9F9E00E6FEC6 /* FFAStartViewController.h */,
 				1FB32F6C170D9F9E00E6FEC6 /* FFAStartViewController.m */,
+				1F955DCF17440D350083C6F4 /* FFADiplomaViewController.h */,
+				1F955DD017440D350083C6F4 /* FFADiplomaViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -379,6 +414,16 @@
 				1FBA36161740FBDA00621A20 /* comic5.png in Resources */,
 				1FBA36171740FBDA00621A20 /* comic5@2x.png in Resources */,
 				1F8348E11742C3EF00B25115 /* questions_data.json in Resources */,
+				1F8348E41743ACE800B25115 /* info-bg.png in Resources */,
+				1F8348E51743ACE800B25115 /* info-bg@2x.png in Resources */,
+				1F955DC91743F19D0083C6F4 /* main-level-closed.png in Resources */,
+				1F955DCA1743F19D0083C6F4 /* main-level-closed@2x.png in Resources */,
+				1F955DCD17440B0A0083C6F4 /* diploma-bg.png in Resources */,
+				1F955DCE17440B0A0083C6F4 /* diploma-bg@2x.png in Resources */,
+				1F955DD4174416D20083C6F4 /* Icon-72.png in Resources */,
+				1F955DD5174416D20083C6F4 /* Icon-72@2x.png in Resources */,
+				1F955DD7174416D80083C6F4 /* Icon-72.png in Resources */,
+				1F955DD9174416E60083C6F4 /* Icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +440,7 @@
 				1F7236CF1713FE3500349A34 /* FFAGameViewController.m in Sources */,
 				1FFF2EBA17202C550071E9F8 /* FFAPlayer.m in Sources */,
 				1F8348DF17425AAD00B25115 /* FFAQuestionData.m in Sources */,
+				1F955DD117440D350083C6F4 /* FFADiplomaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +552,7 @@
 		1FB32F72170D9F9E00E6FEC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "financialflow/financialflow-Prefix.pch";
 				INFOPLIST_FILE = "financialflow/financialflow-Info.plist";
@@ -514,6 +561,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

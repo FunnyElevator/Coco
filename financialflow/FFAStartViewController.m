@@ -13,16 +13,25 @@
     IBOutlet UIButton *islandTwoButton;
     IBOutlet UIButton *islandThreeButton;
     IBOutlet UIButton *islandFourButton;
-    IBOutlet UIButton *getDiplomaButton;
     
+    IBOutlet UIButton *getDiplomaButton;
     IBOutlet UIButton *infoButton;
     IBOutlet UIButton *shareButton;
+    
+    IBOutlet UIView *infoScreen;
+    IBOutlet UITextView *infoText;
+    IBOutlet UIButton *resetButton;
+    __weak IBOutlet UITextView *mainLabel1;
+    __weak IBOutlet UITextView *mainLabel2;
+    __weak IBOutlet UITextView *mainLabel3;
+    __weak IBOutlet UITextView *mainLabel4;
+    
 }
 @property (nonatomic, strong) UIPopoverController *activityPopoverController;
 
 @end
 
-static FFAStartViewController *playerData;
+//static FFAStartViewController *playerData;
 
 @implementation FFAStartViewController
 
@@ -34,6 +43,13 @@ static FFAStartViewController *playerData;
     
     // Addust fonts and set up view
     getDiplomaButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:24];
+    infoText.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:16];
+    resetButton.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:16];
+    mainLabel1.font = [UIFont fontWithName:@"Trade Winds" size:22];
+    mainLabel2.font = [UIFont fontWithName:@"Trade Winds" size:22];
+    mainLabel3.font = [UIFont fontWithName:@"Trade Winds" size:22];
+    mainLabel4.font = [UIFont fontWithName:@"Trade Winds" size:22];
+    
     //infoButton.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:24];
     //shareButton.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:24];
     
@@ -46,31 +62,94 @@ static FFAStartViewController *playerData;
         //initialize user data
     }
      */
-    /*
+    
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    playerData.name = @"It's me!";
+    
+}
+
+- (void)setUpStartscreen {
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    if (playerData.unlockedLevelTwo== YES) {
+        [self unlockButtonTwo];
+        [self finishButtonOne];
+        
+    } else {
+        [self resetButtonOne];
+    }
+    if (playerData.unlockedLevelThree == YES) {
+        [self unlockButtonThree];
+        [self finishButtonTwo];
+    }
+    if (playerData.unlockedLevelFour == YES) {
+        [self unlockButtonFour];
+        [self finishButtonThree];
+    }
+    if (playerData.unlockedDiploma == YES) {
+        [self finishButtonFour];
+    }
+    
+}
+- (void)resetButtonOne {
+    
+}
+- (void)unlockButtonTwo {
+    [islandTwoButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+}
+- (void)unlockButtonThree {
+    [islandThreeButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+}
+- (void)unlockButtonFour {
+    [islandFourButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+}
+- (void)finishButtonOne {
+    
+}
+- (void)finishButtonTwo {
+    
+}
+- (void)finishButtonThree {
+    
+}
+- (void)finishButtonFour {
+    
+}
+
+- (IBAction)showInfoScreen:(id)sender {
+    //NSLog(@"show info Screen");
+    
+    infoScreen.hidden = NO;
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [infoScreen setAlpha:1.0f];
+                     }
+     ];
+}
+- (IBAction)hideInfoScreen:(id)sender {
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [infoScreen setAlpha:0.0f];
+                     }
+     ];
+    infoScreen.hidden = YES;
+}
+- (IBAction)resetGame:(id)sender {
+    
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    playerData.name = @"";
+    playerData.gender = UnKnown;
+    playerData.age = 0;
+    playerData.unlockedLevelTwo = NO;
+    playerData.unlockedLevelThree = NO;
+    playerData.unlockedLevelFour = NO;
+    playerData.unlockedDiploma = NO;
+    
     CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
     NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
     CFRelease(newUniqueId);
-    
-    NSLog(@"UUIDthing: %@", uuidString);
-     
-     */
-    
-    FFAPlayer *playerdata = [FFAPlayer sharedPlayer];
-    
-    playerdata.name = @"hello";
-}
-+ (FFAStartViewController *) sharedInstance
-{
-    if( playerData == nil)
-    {
-        playerData = [[FFAStartViewController alloc]init];
-    }
-    
-    return playerData;
-    
-}
-- (IBAction)resetGame:(id)sender {
-    NSLog(@"resetGamw");
+    playerData.deviceID = uuidString;
+    [playerData.answerValues removeAllObjects];
+    [self setUpStartscreen];
 }
 
 - (IBAction)shareApp:(id)sender

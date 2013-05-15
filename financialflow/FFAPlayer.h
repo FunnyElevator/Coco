@@ -22,6 +22,7 @@ typedef enum {
     bool unlockedLevelTwo;
     bool unlockedLevelThree;
     bool unlockedLevelFour;
+    bool unlockedDiploma;
     int currentQuestion;
     NSMutableArray *answerValues;
     NSString *deviceID;
@@ -33,6 +34,7 @@ typedef enum {
 @property (nonatomic, readwrite) bool unlockedLevelTwo;
 @property (nonatomic, readwrite) bool unlockedLevelThree;
 @property (nonatomic, readwrite) bool unlockedLevelFour;
+@property (nonatomic, readwrite) bool unlockedDiploma;
 @property (nonatomic, readwrite) int currentQuestion;
 @property (nonatomic, readwrite) NSMutableArray *answerValues;
 @property (nonatomic, readwrite) NSString *deviceID;

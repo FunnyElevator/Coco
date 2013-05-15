@@ -16,6 +16,7 @@
 @synthesize unlockedLevelTwo;
 @synthesize unlockedLevelThree;
 @synthesize unlockedLevelFour;
+@synthesize unlockedDiploma;
 @synthesize currentQuestion;
 @synthesize answerValues;
 @synthesize deviceID;
@@ -39,6 +40,7 @@
         unlockedLevelTwo = NO;
         unlockedLevelThree = NO;
         unlockedLevelFour = NO;
+        unlockedDiploma = NO;
         currentQuestion = 0;
         answerValues = [[NSMutableArray alloc] init];
         

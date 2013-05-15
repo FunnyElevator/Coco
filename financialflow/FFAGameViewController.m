@@ -17,11 +17,13 @@
 #pragma maark - main start functions
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+{    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
+    
+    
     return self;
 }
 
@@ -91,10 +93,18 @@
      
     }
     
-    FFAPlayer *playerdata = [FFAPlayer sharedPlayer];
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
     
-    NSLog(@"Playername: %@", playerdata.name);
+    //NSLog(@"Playername: %@", playerData.name);
+    
+    if (playerData.currentQuestion < 100) {
+        [self showComicstrip];
+    }
 }
+- (void)showComicstrip {
+    
+}
+
 
 +(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{
     NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
@@ -102,9 +112,6 @@
     __autoreleasing NSError* error = nil;
     id result = [NSJSONSerialization JSONObjectWithData:data
                                                 options:kNilOptions error:&error];
-    // Be careful here. You add this as a category to NSDictionary
-    // but you get an id back, which means that result
-    // might be an NSArray as well!
     if (error != nil) return nil;
     return result;
 }
