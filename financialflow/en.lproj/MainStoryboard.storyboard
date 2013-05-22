@@ -116,7 +116,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2Z0-qP-M19" kind="modal" modalTransitionStyle="crossDissolve" id="51s-aI-IAf"/>
+                                    <segue destination="2Z0-qP-M19" kind="modal" identifier="showDiplomaScreen" modalTransitionStyle="crossDissolve" id="51s-aI-IAf"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-PO-VS3">
@@ -130,7 +130,8 @@
                                     <constraint firstAttribute="height" constant="72" id="MCM-I6-LEk"/>
                                     <constraint firstAttribute="width" constant="187" id="av3-xh-5v0"/>
                                 </constraints>
-                                <string key="text">Opi perusteetJamaikalla</string>
+                                <string key="text">Opi perusteet
+Jamaikalla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -141,7 +142,8 @@
                                     <constraint firstAttribute="height" constant="72" id="i7b-C2-LcH"/>
                                     <constraint firstAttribute="width" constant="187" id="odv-nk-7eL"/>
                                 </constraints>
-                                <string key="text">Kierrä karikotTasmaniassa</string>
+                                <string key="text">Kierrä karikot
+Tasmaniassa</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -151,17 +153,21 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="TqN-lh-PyP"/>
                                 </constraints>
-                                <string key="text">Huomioi olosuhteetMadagaskarilla</string>
+                                <string key="text">Huomioi olosuhteet
+Madagaskarilla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-hf-VMr"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level1-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-38-RbZ"/>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-kb-7fC">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="E0J-eL-6w4"/>
                                 </constraints>
-                                <string key="text">Navigoi perilleMalediiveilla</string>
+                                <string key="text">Navigoi perille
+Malediiveilla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -219,62 +225,85 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="resetGame:" destination="2" eventType="touchUpInside" id="8f0-Mg-Ndi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-3Q-UsY">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rfy-e6-A08"/>
+                                            <constraint firstAttribute="width" constant="150" id="eCd-kR-sik"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Back" backgroundImage="diploma-button-bg.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hideInfoScreen:" destination="2" eventType="touchUpInside" id="VRe-rT-LEa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="OJG-bP-zhO" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="3G9-YK-JwL"/>
+                                    <constraint firstItem="QlZ-Ix-bXz" firstAttribute="bottom" secondItem="qNf-3Q-UsY" secondAttribute="bottom" type="default" id="Fss-Td-KEf"/>
+                                    <constraint firstItem="qNf-3Q-UsY" firstAttribute="leading" secondItem="DGm-Kr-zVr" secondAttribute="leading" constant="251" id="GZQ-fz-Sn9"/>
                                     <constraint firstItem="QlZ-Ix-bXz" firstAttribute="leading" secondItem="OJG-bP-zhO" secondAttribute="leading" type="default" id="JLz-2D-pbD"/>
-                                    <constraint firstItem="pmQ-kp-BXM" firstAttribute="leading" secondItem="DGm-Kr-zVr" secondAttribute="leading" constant="251" id="S3C-6N-KMp"/>
                                     <constraint firstAttribute="bottom" secondItem="iWH-u6-Qo3" secondAttribute="bottom" constant="135" id="ZZI-Fh-lDz"/>
                                     <constraint firstItem="OJG-bP-zhO" firstAttribute="centerX" secondItem="DGm-Kr-zVr" secondAttribute="centerX" type="default" id="Zq9-la-gPR"/>
                                     <constraint firstAttribute="trailing" secondItem="iWH-u6-Qo3" secondAttribute="trailing" constant="260" id="bi5-xw-943"/>
                                     <constraint firstItem="OJG-bP-zhO" firstAttribute="top" secondItem="QlZ-Ix-bXz" secondAttribute="top" type="default" id="lbO-fa-kzs"/>
                                     <constraint firstItem="pmQ-kp-BXM" firstAttribute="top" secondItem="DGm-Kr-zVr" secondAttribute="top" constant="195" id="pGr-Ih-cVM"/>
+                                    <constraint firstItem="qNf-3Q-UsY" firstAttribute="leading" secondItem="pmQ-kp-BXM" secondAttribute="leading" type="default" id="ttP-ee-8Il"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gVt-hf-VMr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="285" id="00l-fh-1cF"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="top" secondItem="5" secondAttribute="top" constant="348" id="0nw-PK-rEI"/>
-                            <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="10" id="1tc-9k-wiY"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="2dj-W7-sX2"/>
-                            <constraint firstItem="A8F-6y-Whk" firstAttribute="leading" secondItem="2ba-TY-3Ky" secondAttribute="leading" type="default" id="4VM-yN-bU4"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="leading" secondItem="vK5-ob-9bn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6N7-QH-FFT"/>
                             <constraint firstItem="EeD-kb-7fC" firstAttribute="centerX" secondItem="DP8-5b-r0V" secondAttribute="centerX" type="default" id="7aX-W1-14y"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="centerX" secondItem="obf-Ap-0Q2" secondAttribute="centerX" type="default" id="A7D-hb-peN"/>
+                            <constraint firstItem="gVt-hf-VMr" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="96" id="Bhs-Lo-V4k"/>
                             <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="7VA-pZ-TbV" secondAttribute="centerX" type="default" id="CzJ-aN-loA"/>
                             <constraint firstAttribute="bottom" secondItem="7VA-pZ-TbV" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="DSq-4h-Ozp"/>
                             <constraint firstAttribute="trailing" secondItem="iG7-3e-NZe" secondAttribute="trailing" constant="31" id="FMf-24-jKE"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="leading" secondItem="rcu-b3-XgB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="H0y-Yr-MTV"/>
                             <constraint firstItem="Zdy-PO-VS3" firstAttribute="top" secondItem="5" secondAttribute="top" constant="10" id="Hcb-cE-2CF"/>
                             <constraint firstItem="3WS-ap-SmD" firstAttribute="bottom" secondItem="rcu-b3-XgB" secondAttribute="bottom" type="default" id="IR1-I7-a4N"/>
+                            <constraint firstItem="AYF-xB-wJi" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="KqD-fQ-u7U"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="bottom" secondItem="obf-Ap-0Q2" secondAttribute="bottom" type="default" id="LOO-7b-JoK"/>
                             <constraint firstItem="iW2-LD-Aed" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="O5Q-Vc-Yhk"/>
+                            <constraint firstItem="A8F-6y-Whk" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="41" id="OAP-MF-Poo"/>
+                            <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="DGm-Kr-zVr" secondAttribute="centerX" type="default" id="Obz-T5-udk"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="top" secondItem="EeD-kb-7fC" secondAttribute="top" type="default" id="TZr-n1-5ZG"/>
                             <constraint firstItem="iG7-3e-NZe" firstAttribute="bottom" secondItem="2ba-TY-3Ky" secondAttribute="bottom" type="default" id="Tl3-u7-4wL"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="top" secondItem="ZgG-j5-XPy" secondAttribute="top" type="default" id="Uc8-WD-gay"/>
                             <constraint firstItem="3WS-ap-SmD" firstAttribute="top" secondItem="rcu-b3-XgB" secondAttribute="top" type="default" id="Une-Eu-PhM"/>
+                            <constraint firstItem="1M9-38-RbZ" firstAttribute="top" secondItem="gVt-hf-VMr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="W1X-AW-ncS"/>
                             <constraint firstItem="obf-Ap-0Q2" firstAttribute="top" secondItem="3WS-ap-SmD" secondAttribute="top" type="default" id="WII-bP-Bva"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="bottom" secondItem="vK5-ob-9bn" secondAttribute="bottom" type="default" id="Xzh-Cf-SGw"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="ZBW-Ht-Bzd"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="top" secondItem="obf-Ap-0Q2" secondAttribute="top" type="default" id="Zes-CU-QaE"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="bottom" secondItem="EeD-kb-7fC" secondAttribute="bottom" type="default" id="bVn-fz-O46"/>
                             <constraint firstAttribute="trailing" secondItem="AsC-dh-vmy" secondAttribute="trailing" constant="14" id="cAp-Bi-kJ9"/>
+                            <constraint firstItem="1M9-38-RbZ" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="55" id="dsL-cV-gqT"/>
                             <constraint firstAttribute="bottom" secondItem="AsC-dh-vmy" secondAttribute="bottom" constant="3" id="eIe-XF-9tm"/>
                             <constraint firstItem="rcu-b3-XgB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="150" id="hCA-ef-aCC"/>
                             <constraint firstItem="obf-Ap-0Q2" firstAttribute="bottom" secondItem="3WS-ap-SmD" secondAttribute="bottom" type="default" id="hYe-bV-Qbm"/>
-                            <constraint firstItem="AYF-xB-wJi" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="iZI-ar-R7P"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="mBk-qg-Nn6"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="ojp-IW-III"/>
+                            <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="10" id="ouA-1V-Nq7"/>
+                            <constraint firstItem="2ba-TY-3Ky" firstAttribute="leading" secondItem="A8F-6y-Whk" secondAttribute="leading" type="default" id="sl1-Ze-5lL"/>
                             <constraint firstItem="rcu-b3-XgB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="13" id="u8E-ZQ-MQZ"/>
                             <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="iW2-LD-Aed" secondAttribute="leading" type="default" id="uUB-EV-Q0L"/>
                             <constraint firstItem="AYF-xB-wJi" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="uZR-Eb-xFI"/>
-                            <constraint firstItem="A8F-6y-Whk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="200" id="ubR-KB-Xea"/>
                             <constraint firstAttribute="bottom" secondItem="2ba-TY-3Ky" secondAttribute="bottom" constant="32" id="vmn-Lb-y8h"/>
-                            <constraint firstItem="A8F-6y-Whk" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="41" id="wHZ-qq-gQf"/>
                             <constraint firstItem="3WS-ap-SmD" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="252" id="wq6-Yq-B5Z"/>
+                            <constraint firstItem="A8F-6y-Whk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="200" id="x5S-gk-kRc"/>
                             <constraint firstItem="obf-Ap-0Q2" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="503" id="yDB-5l-bGh"/>
-                            <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="DGm-Kr-zVr" secondAttribute="centerX" type="default" id="z7e-RG-Bje"/>
                             <constraint firstAttribute="bottom" secondItem="QaY-SQ-2C4" secondAttribute="bottom" constant="6" id="z8B-hG-g1p"/>
                             <constraint firstItem="iG7-3e-NZe" firstAttribute="top" secondItem="2ba-TY-3Ky" secondAttribute="top" type="default" id="zp6-5o-c5R"/>
                         </constraints>
@@ -282,6 +311,7 @@ Aloita seikkailu Jamaikalta!</string>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="backButtonInfo" destination="qNf-3Q-UsY" id="7xA-Ci-7iS"/>
                         <outlet property="getDiplomaButton" destination="7VA-pZ-TbV" id="sOl-qS-F7q"/>
                         <outlet property="infoButton" destination="2ba-TY-3Ky" id="R7s-MG-YMz"/>
                         <outlet property="infoScreen" destination="DGm-Kr-zVr" id="47J-Zq-m9X"/>
@@ -324,6 +354,7 @@ Aloita seikkailu Jamaikalta!</string>
                                             <constraint firstAttribute="width" constant="318" id="zcQ-Dm-FnA"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="boat1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBn-uR-fyf"/>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-UR-Sev">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="262" id="4aA-Oe-xQk"/>
@@ -364,9 +395,11 @@ Aloita seikkailu Jamaikalta!</string>
                                     <constraint firstItem="dDZ-Qz-fff" firstAttribute="trailing" secondItem="hZ7-s9-Zbn" secondAttribute="trailing" type="default" id="AZs-ou-H0r"/>
                                     <constraint firstItem="hHz-UR-Sev" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" constant="244" id="DRc-85-aGs"/>
                                     <constraint firstAttribute="bottom" secondItem="hHz-UR-Sev" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Fks-7Q-rAJ"/>
+                                    <constraint firstItem="RBn-uR-fyf" firstAttribute="centerY" secondItem="ZUQ-Bk-tdw" secondAttribute="centerY" type="default" id="ODJ-R5-UfZ"/>
                                     <constraint firstItem="bXn-nY-rr0" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="182" id="WCP-b4-3f3"/>
                                     <constraint firstItem="dDZ-Qz-fff" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="30" id="aSM-ZQ-tsd"/>
                                     <constraint firstItem="ZUQ-Bk-tdw" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" type="default" id="alw-4X-mkW"/>
+                                    <constraint firstItem="RBn-uR-fyf" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" constant="98" id="gd6-b0-X7h"/>
                                     <constraint firstItem="bG8-zB-LuX" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ghW-xf-zNv"/>
                                     <constraint firstAttribute="trailing" secondItem="bG8-zB-LuX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hPu-KJ-gNX"/>
                                     <constraint firstItem="ZUQ-Bk-tdw" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" type="default" id="p15-3O-Kok"/>
@@ -382,63 +415,81 @@ Aloita seikkailu Jamaikalta!</string>
                                             <constraint firstAttribute="width" constant="269" id="UaE-Av-0ml"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-V2-ZGG">
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-V2-ZGG">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="239" id="NIS-Wb-ejq"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="answer-button-normal.png">
+                                        <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answeredN1:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="tai-Ve-ths"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-sA-fvf">
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-sA-fvf">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="answer-button-normal.png">
+                                        <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answeredN2:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="iGL-e9-EhH"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq0-6r-uPO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yq0-6r-uPO">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="answer-button-normal.png">
+                                        <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answeredN3:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="rpr-kE-Ek2"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7m-UP-HfU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="J7m-UP-HfU">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="UTn-ug-jWK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="answer-button-normal.png">
+                                        <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answeredN4:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="t2X-xb-tdO"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39c-qa-HNg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="39c-qa-HNg">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" backgroundImage="answer-button-normal.png">
+                                        <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answeredN5:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="DVd-N9-7bT"/>
+                                        </connections>
                                     </button>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaV-ke-ewi">
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="tip-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-5G-KXh"/>
-                                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-Ic-jsH">
+                                            <textView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-Ic-jsH">
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="209" id="eTq-4f-sOj"/>
@@ -446,7 +497,7 @@ Aloita seikkailu Jamaikalta!</string>
                                                 </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -459,16 +510,15 @@ Aloita seikkailu Jamaikalta!</string>
                                             <constraint firstItem="7Pl-5G-KXh" firstAttribute="leading" secondItem="KaV-ke-ewi" secondAttribute="leading" type="default" id="ybd-B8-JxH"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzo-Gv-9AV">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="225" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-yg-UFO">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="81" id="LPG-7g-ePI"/>
-                                            <constraint firstAttribute="width" constant="249" id="wX6-LD-drk"/>
+                                            <constraint firstAttribute="height" constant="80" id="taj-ND-0cB"/>
+                                            <constraint firstAttribute="width" constant="225" id="yNx-nw-uQA"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-i8-7WY"/>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CategoryTitel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-ga-Vob">
                                         <constraints>
@@ -484,28 +534,30 @@ Aloita seikkailu Jamaikalta!</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="mzo-Gv-9AV" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="66" id="0Yv-3X-aRJ"/>
+                                    <constraint firstItem="apM-zj-sGp" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="142" id="1Ew-OD-Edd"/>
                                     <constraint firstItem="hlX-i8-7WY" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="7" id="2TK-TB-ULo"/>
                                     <constraint firstItem="lb4-jH-0ZR" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" type="default" id="3xV-04-riT"/>
-                                    <constraint firstItem="apM-zj-sGp" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="142" id="6dl-tu-AzU"/>
+                                    <constraint firstItem="39c-qa-HNg" firstAttribute="trailing" secondItem="yq0-6r-uPO" secondAttribute="trailing" type="default" id="8Fo-mM-nQ3"/>
                                     <constraint firstItem="yq0-6r-uPO" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="321" id="9mI-5Q-uJz"/>
-                                    <constraint firstItem="KaV-ke-ewi" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="590" id="A60-li-gs0"/>
                                     <constraint firstItem="J7m-UP-HfU" firstAttribute="leading" secondItem="yq0-6r-uPO" secondAttribute="leading" type="default" id="D3r-L8-B8l"/>
+                                    <constraint firstItem="5bp-V2-ZGG" firstAttribute="trailing" secondItem="sdk-sA-fvf" secondAttribute="trailing" type="default" id="DQa-ym-fiS"/>
                                     <constraint firstItem="yq0-6r-uPO" firstAttribute="leading" secondItem="sdk-sA-fvf" secondAttribute="leading" type="default" id="Hsb-vp-EtE"/>
                                     <constraint firstItem="sdk-sA-fvf" firstAttribute="leading" secondItem="5bp-V2-ZGG" secondAttribute="leading" type="default" id="Jzm-l6-NGA"/>
                                     <constraint firstItem="J7m-UP-HfU" firstAttribute="centerX" secondItem="lb4-jH-0ZR" secondAttribute="centerX" type="default" id="Qy6-bN-IZ9"/>
-                                    <constraint firstAttribute="trailing" secondItem="apM-zj-sGp" secondAttribute="trailing" constant="56" id="Y9d-y1-iET"/>
-                                    <constraint firstItem="mzo-Gv-9AV" firstAttribute="trailing" secondItem="qZU-2D-0YS" secondAttribute="trailing" type="default" id="YPD-5S-SUz"/>
+                                    <constraint firstItem="yq0-6r-uPO" firstAttribute="trailing" secondItem="sdk-sA-fvf" secondAttribute="trailing" type="default" id="W1P-sM-IDN"/>
+                                    <constraint firstItem="KaV-ke-ewi" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="590" id="X5A-gd-uAo"/>
                                     <constraint firstItem="qZU-2D-0YS" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="230" id="YRy-Ow-Ofw"/>
                                     <constraint firstItem="lb4-jH-0ZR" firstAttribute="trailing" secondItem="UJ4-ga-Vob" secondAttribute="trailing" type="default" id="Ypy-GT-jLT"/>
                                     <constraint firstAttribute="bottom" secondItem="J7m-UP-HfU" secondAttribute="bottom" constant="306" id="ZHa-b4-T7H"/>
                                     <constraint firstItem="J7m-UP-HfU" firstAttribute="leading" secondItem="39c-qa-HNg" secondAttribute="leading" type="default" id="ayN-c8-ZpK"/>
+                                    <constraint firstAttribute="trailing" secondItem="apM-zj-sGp" secondAttribute="trailing" constant="56" id="dDO-JB-W8N"/>
+                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="centerX" secondItem="KaV-ke-ewi" secondAttribute="centerX" type="default" id="ioP-f7-ery"/>
                                     <constraint firstItem="lb4-jH-0ZR" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" type="default" id="jbD-dJ-mJc"/>
-                                    <constraint firstItem="J7m-UP-HfU" firstAttribute="centerX" secondItem="mzo-Gv-9AV" secondAttribute="centerX" type="default" id="jnv-ed-n5I"/>
-                                    <constraint firstAttribute="trailing" secondItem="qZU-2D-0YS" secondAttribute="trailing" constant="61" id="kGY-SV-anT"/>
                                     <constraint firstItem="5bp-V2-ZGG" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="151" id="nKI-LF-HPT"/>
                                     <constraint firstAttribute="bottom" secondItem="39c-qa-HNg" secondAttribute="bottom" constant="220" id="q3r-x4-1la"/>
                                     <constraint firstItem="qZU-2D-0YS" firstAttribute="trailing" secondItem="KaV-ke-ewi" secondAttribute="trailing" type="default" id="qkY-o9-4SX"/>
+                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="67" id="sDd-zO-03h"/>
+                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="taR-Me-ldO"/>
                                     <constraint firstItem="hlX-i8-7WY" firstAttribute="centerY" secondItem="UJ4-ga-Vob" secondAttribute="centerY" type="default" id="uOf-sm-fUn"/>
                                     <constraint firstItem="hlX-i8-7WY" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" constant="-12" id="vUQ-JU-Wxj"/>
                                     <constraint firstItem="sdk-sA-fvf" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="237" id="wlM-YR-xG3"/>
@@ -557,15 +609,15 @@ Aloita seikkailu Jamaikalta!</string>
                                     <constraint firstItem="VkX-OJ-1Ex" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" type="default" id="FaQ-er-pHt"/>
                                     <constraint firstItem="9Gq-vB-dX0" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LJw-jM-1Yt"/>
                                     <constraint firstItem="dcS-gz-8WL" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="10" id="O9B-Sx-d6e"/>
-                                    <constraint firstItem="RFn-ag-4B4" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="62" id="PjT-4Y-JNq"/>
-                                    <constraint firstAttribute="trailing" secondItem="RFn-ag-4B4" secondAttribute="trailing" constant="15" id="XRy-Md-pAO"/>
                                     <constraint firstItem="VXk-qw-ZqO" firstAttribute="leading" secondItem="9Gq-vB-dX0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Z3Q-Iv-DwS"/>
+                                    <constraint firstAttribute="trailing" secondItem="RFn-ag-4B4" secondAttribute="trailing" constant="15" id="asz-Qx-mA7"/>
                                     <constraint firstItem="nb5-D3-G2D" firstAttribute="centerY" secondItem="VXk-qw-ZqO" secondAttribute="centerY" type="default" id="f9E-Qa-IU5"/>
                                     <constraint firstItem="VXk-qw-ZqO" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gQd-OX-ukC"/>
                                     <constraint firstItem="9Gq-vB-dX0" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="5" id="iLp-bm-DYm"/>
                                     <constraint firstItem="VkX-OJ-1Ex" firstAttribute="bottom" secondItem="cjx-cF-JZK" secondAttribute="bottom" type="default" id="ia8-aW-XZg"/>
                                     <constraint firstItem="VkX-OJ-1Ex" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" type="default" id="l1I-9a-Rr3"/>
-                                    <constraint firstItem="4by-vF-w4y" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="342" id="lJr-hy-CqA"/>
+                                    <constraint firstItem="4by-vF-w4y" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="342" id="laX-Ka-fR2"/>
+                                    <constraint firstItem="RFn-ag-4B4" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="top" type="default" id="lrC-3y-gj3"/>
                                     <constraint firstItem="dcS-gz-8WL" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="10" id="s0C-r3-qgQ"/>
                                     <constraint firstItem="0st-cI-I3S" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="59" id="xeO-8i-Rbh"/>
                                 </constraints>
@@ -584,6 +636,7 @@ Aloita seikkailu Jamaikalta!</string>
                             <constraint firstItem="hZ7-s9-Zbn" firstAttribute="top" secondItem="l9j-mz-9j9" secondAttribute="top" type="default" id="hYr-hg-gP9"/>
                             <constraint firstItem="cjx-cF-JZK" firstAttribute="top" secondItem="l9j-mz-9j9" secondAttribute="top" type="default" id="i6L-r8-WUG"/>
                             <constraint firstAttribute="bottom" secondItem="Pla-jY-T4a" secondAttribute="bottom" constant="-52" id="rEn-Re-kPA"/>
+                            <constraint firstAttribute="trailing" secondItem="Pla-jY-T4a" secondAttribute="trailing" constant="704" id="zaX-fc-vFt"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -595,6 +648,9 @@ Aloita seikkailu Jamaikalta!</string>
                         <outlet property="answer3Button" destination="yq0-6r-uPO" id="WSM-ft-uqD"/>
                         <outlet property="answer4Button" destination="J7m-UP-HfU" id="ldy-EH-dFP"/>
                         <outlet property="answer5Button" destination="39c-qa-HNg" id="tZd-eW-swm"/>
+                        <outlet property="badgeRightImg" destination="qZU-2D-0YS" id="txe-tC-fYL"/>
+                        <outlet property="badgeWrongImg" destination="apM-zj-sGp" id="xoc-nh-X42"/>
+                        <outlet property="boatView" destination="RBn-uR-fyf" id="toV-KQ-daC"/>
                         <outlet property="comicButton" destination="4by-vF-w4y" id="esm-Qt-DhL"/>
                         <outlet property="comicImg1" destination="0st-cI-I3S" id="DcH-Fa-tEi"/>
                         <outlet property="comicImg2" destination="RFn-ag-4B4" id="NWe-19-fw2"/>
@@ -608,7 +664,7 @@ Aloita seikkailu Jamaikalta!</string>
                         <outlet property="menuButton" destination="bG8-zB-LuX" id="l7S-NT-DeZ"/>
                         <outlet property="portImage" destination="bXn-nY-rr0" id="JTU-v7-bM8"/>
                         <outlet property="questionCatLabel" destination="UJ4-ga-Vob" id="hse-ra-uEt"/>
-                        <outlet property="questionTextLabel" destination="mzo-Gv-9AV" id="QhS-gK-zWe"/>
+                        <outlet property="questionTextLabel" destination="Yyj-yg-UFO" id="oql-pi-H15"/>
                         <outlet property="questionsView" destination="Pla-jY-T4a" id="Yvp-lI-CvO"/>
                         <outlet property="tipsTextLabel" destination="rkx-Ic-jsH" id="9Qz-tc-cFT"/>
                         <outlet property="tipsView" destination="KaV-ke-ewi" id="uAm-K8-yBb"/>
@@ -684,6 +740,7 @@ Aloita seikkailu Jamaikalta!</string>
     <resources>
         <image name="answer-button-normal.png" width="239" height="86"/>
         <image name="background.png" width="1024" height="768"/>
+        <image name="boat1.png" width="164" height="180"/>
         <image name="coco-logo.png" width="230" height="121"/>
         <image name="comic-continue.png" width="375" height="192"/>
         <image name="comic1.png" width="543" height="352"/>
@@ -698,6 +755,8 @@ Aloita seikkailu Jamaikalta!</string>
         <image name="info-bg.png" width="717" height="532"/>
         <image name="main-level-bg.png" width="269" height="476"/>
         <image name="main-level-closed.png" width="253" height="181"/>
+        <image name="menu-level1-bg.png" width="199" height="169"/>
+        <image name="play-button.png" width="89" height="89"/>
         <image name="right-badge.png" width="50" height="51"/>
         <image name="round-button-behind.png" width="119" height="151"/>
         <image name="round-button-bg.png" width="75" height="76"/>
@@ -706,75 +765,12 @@ Aloita seikkailu Jamaikalta!</string>
         <image name="tip-bg.png" width="254" height="256"/>
         <image name="wrong-badge.png" width="50" height="51"/>
     </resources>
-    <classes>
-        <class className="FFADiplomaViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFADiplomaViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="FFAGameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="continueAfterQuestion:"/>
-                <relationship kind="action" name="finishComic:"/>
-                <relationship kind="outlet" name="answer1Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer2Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer3Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer4Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer5Button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="comicButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="comicImg1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="comicImg2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="comicImg3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="comicImg4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="comicImg5" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="comicView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="continueButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="portImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="questionCatLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="questionTextLabel" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="questionsView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tipsTextLabel" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tipsView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="FFAStartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAStartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="hideInfoScreen:"/>
-                <relationship kind="action" name="resetGame:"/>
-                <relationship kind="action" name="shareApp:"/>
-                <relationship kind="action" name="showInfoScreen:"/>
-                <relationship kind="outlet" name="getDiplomaButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="infoScreen" candidateClass="UIView"/>
-                <relationship kind="outlet" name="infoText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="islandFourButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandTwoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mainLabel1" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="mainLabel2" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="mainLabel3" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="mainLabel4" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="K1u-l3-B9T"/>
+        <segue reference="K3c-qD-6x4"/>
     </inferredMetricsTieBreakers>
 </document>

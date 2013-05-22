@@ -22,20 +22,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     questionCatLabel.font = [UIFont fontWithName:@"Trade Winds" size:20];
-    questionTextLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:13];
+    questionTextLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
     
-    answer1Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
-    answer2Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
-    answer3Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
-    answer4Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
-    answer5Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:18];
+    answer1Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    answer2Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    answer3Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    answer4Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    answer5Button.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    
+    
+    answer1Button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    answer2Button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    answer3Button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    answer4Button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    answer5Button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
     menuButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:18];
     continueButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:20];
     
     answer1Button.titleLabel.text = @"Hello";
     
     self.questionaireData = [NSMutableArray array];
-    
+    self.boatPosition = 180;
     
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"questions_data" ofType:@"json"];
@@ -68,7 +76,7 @@
         NSNumber *answer5ValueQ = [singleQuestion objectForKey:@"answer5_value"];
         NSString *tip = [singleQuestion objectForKey:@"tip"];
 
-        NSLog(@"Event tags: %@", idOfQ);
+        //NSLog(@"Event tags: %@", idOfQ);
         FFAQuestionData *newQuestion = [FFAQuestionData questionWithText:questionText
                                                                    idofQ:idOfQ
                                                               categoryID:categoryID
@@ -84,13 +92,12 @@
                                                             answer5Value:answer5ValueQ
                                                                  andATip:tip];
         [self.questionaireData addObject:newQuestion];
-        //NSLog(@"Event added with ID: %@",newEvent.idNumber);
+        //NSLog(@"Event added with ID: %@",newQuestion.idNumber);
      
     }
+    //NSLog(@"QData count: %lu", (unsigned long)[self.questionaireData count]);
     
     FFAPlayer *playerData = [FFAPlayer sharedPlayer];
-    
-    //NSLog(@"Playername: %@", playerData.name);
     
     if (playerData.currentQuestion < 100) {
         [self showComicstrip];
@@ -149,7 +156,6 @@
 }
 
 - (IBAction)finishComic:(id)sender {
-    //[comicView setHidden:YES];
     [UIView animateWithDuration:0.5f
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -167,30 +173,165 @@
                          [comicButton setAlpha:0.0f];
                          [comicButton setEnabled:NO];
                      }];
-    [self showQuestion];                         
+                             
     
-    
-    
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    playerData.currentQuestion = 101;
+    //NSLog(@"plD1: %@", [NSNumber numberWithInt:playerData.currentQuestion]);
+
+    [self showQuestion];
 }
+
+- (IBAction)answeredN1:(id)sender {
+    [self questionAnsweredNumber:1];
+    
+    if ([self.currentQData.answer1Value intValue] < 10) {
+        [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN2:(id)sender {
+    [self questionAnsweredNumber:2];
+    if ([self.currentQData.answer2Value intValue] < 10) {
+        [answer2Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN3:(id)sender {
+    [self questionAnsweredNumber:3];
+    if ([self.currentQData.answer3Value intValue] < 10) {
+        [answer3Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN4:(id)sender {
+    [self questionAnsweredNumber:4];
+    if ([self.currentQData.answer4Value intValue] < 10) {
+        [answer4Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN5:(id)sender {
+    [self questionAnsweredNumber:5];
+    if ([self.currentQData.answer5Value intValue] < 10) {
+        [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
 - (void)setupGameField {
-    int i=0;
-    if (i<100) {
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    
+    if (playerData.currentQuestion<200) {
         [portImage setImage:[UIImage imageNamed:@"port1.png"]];
         [islandImage setImage:[UIImage imageNamed:@"island1.png"]];
-        questionCatLabel.text = @"<#string#>";
+        questionCatLabel.text = @"OPI PERUSTEET";
+    } else if (playerData.currentQuestion<300) {
+        [portImage setImage:[UIImage imageNamed:@"port2.png"]];
+        [islandImage setImage:[UIImage imageNamed:@"island2.png"]];
+        questionCatLabel.text = @"Kierrä karikot";
     }
 }
 
 - (void)showQuestion {
     [self enableAllButtons];
+    badgeRightImg.hidden = YES;
+    badgeWrongImg.hidden = YES;
+    continueButton.hidden = YES;
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [tipsView setCenter:CGPointMake(132, 888)];
+                         [tipsView setAlpha:0.0f];
+                     }];
+    
+    tipsTextLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    for (int i=0; i< self.questionaireData.count; i++) {
+        FFAQuestionData *currentArrayQuestion = [self.questionaireData objectAtIndex:i];
+        if ([currentArrayQuestion.idNumber intValue] == playerData.currentQuestion ) {
+            //NSLog(@"I found something");
+            self.currentQData = currentArrayQuestion;
+            
+        }
+    }
+    NSLog(@"Current QData.number %@", self.currentQData.idNumber);
+    
+    if ([self.currentQData.answer5Text isEqualToString:@""]) {
+        answer5Button.hidden = YES;
+    } else {
+        answer5Button.hidden = NO;
+    }
+    if ([self.currentQData.answer4Text isEqualToString:@""]) {
+        answer4Button.hidden = YES;
+    } else {
+        answer4Button.hidden = NO;
+    }
+    [answer1Button setTitle:self.currentQData.answer1Text forState:UIControlStateNormal];
+    [answer2Button setTitle:self.currentQData.answer2Text forState:UIControlStateNormal];
+    [answer3Button setTitle:self.currentQData.answer3Text forState:UIControlStateNormal];
+    [answer4Button setTitle:self.currentQData.answer4Text forState:UIControlStateNormal];
+    [answer5Button setTitle:self.currentQData.answer5Text forState:UIControlStateNormal];
+    
+    tipsTextLabel.text = self.currentQData.tip;
+    questionTextLabel.text = self.currentQData.question;
+    NSLog(@"self.currentQData.answer1Text: %@", self.currentQData.answer1Text);
+
+}
+
+- (void)questionAnsweredNumber:(int)answerNumber {
+    [self disableAllButtons];
+    continueButton.hidden = NO;
+    if ([self.currentQData.answer5Text isEqualToString:@""]) {
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             [tipsView setCenter:CGPointMake(132, 628)];
+                             [tipsView setAlpha:1.0f];
+                         }];
+    } else {
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             [tipsView setCenter:CGPointMake(132, 718)];
+                             [tipsView setAlpha:1.0f];
+                         }];
+    }
+    self.boatPosition += 80;
+    [UIImageView animateWithDuration:1.0f
+                     animations:^{
+                         [boatView setCenter:CGPointMake(self.boatPosition, 374)];
+                     }];
+    if ([self.currentQData.answer1Value intValue] == 20) {
+        [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
+    }
+    if ([self.currentQData.answer2Value intValue] == 20) {
+        [answer2Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
+    }
+    if ([self.currentQData.answer3Value intValue] == 20) {
+        [answer3Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
+    }
+    if ([self.currentQData.answer4Value intValue] == 20) {
+        [answer4Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
+    }
+    if ([self.currentQData.answer5Value intValue] == 20) {
+        [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
+    }
+    
+    // show result
+    //animate Screen
+}
+
+- (IBAction)continueAfterQuestion:(id)sender {
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    
+    if (playerData.currentQuestion == 106 || playerData.currentQuestion == 206 || playerData.currentQuestion == 306 || playerData.currentQuestion == 406) {
+        [self showResultScreen];
+    } else {
+        playerData.currentQuestion += 1;
+        [self showQuestion];
+    }
     
 }
 
-- (void)questionAnswered {
+- (void)showResultScreen {
     
-}
-- (IBAction)continueAfterQuestion:(id)sender {
- 
 }
 
 - (void)disableAllButtons {
@@ -207,6 +348,12 @@
     answer3Button.enabled = YES;
     answer4Button.enabled = YES;
     answer5Button.enabled = YES;
+    
+    [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
+    [answer2Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
+    [answer3Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
+    [answer4Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
+    [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
 }
 
 +(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{

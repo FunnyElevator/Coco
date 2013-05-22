@@ -14,6 +14,8 @@
     IBOutlet UIButton *islandThreeButton;
     IBOutlet UIButton *islandFourButton;
     
+    
+    
     IBOutlet UIButton *getDiplomaButton;
     IBOutlet UIButton *infoButton;
     IBOutlet UIButton *shareButton;
@@ -21,6 +23,7 @@
     IBOutlet UIView *infoScreen;
     IBOutlet UITextView *infoText;
     IBOutlet UIButton *resetButton;
+    __weak IBOutlet UIButton *backButtonInfo;
     __weak IBOutlet UITextView *mainLabel1;
     __weak IBOutlet UITextView *mainLabel2;
     __weak IBOutlet UITextView *mainLabel3;
@@ -45,6 +48,7 @@
     getDiplomaButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:24];
     infoText.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:16];
     resetButton.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:16];
+    backButtonInfo.titleLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:16];
     mainLabel1.font = [UIFont fontWithName:@"Trade Winds" size:22];
     mainLabel2.font = [UIFont fontWithName:@"Trade Winds" size:22];
     mainLabel3.font = [UIFont fontWithName:@"Trade Winds" size:22];
@@ -63,9 +67,14 @@
     }
      */
     
-    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
-    playerData.name = @"It's me!";
+    //FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    //playerData.name = @"It's me!";
+    NSLog(@"View loaded");
     
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"View appear");
 }
 
 - (void)setUpStartscreen {
@@ -80,7 +89,7 @@
     if (playerData.unlockedLevelThree == YES) {
         [self unlockButtonThree];
         [self finishButtonTwo];
-    }
+    } 
     if (playerData.unlockedLevelFour == YES) {
         [self unlockButtonFour];
         [self finishButtonThree];
@@ -91,6 +100,15 @@
     
 }
 - (void)resetButtonOne {
+    
+}
+- (void)resetButtonTwo {
+    
+}
+- (void)resetButtonThree {
+    
+}
+- (void)resetButtonFour {
     
 }
 - (void)unlockButtonTwo {
@@ -115,6 +133,9 @@
     
 }
 
+
+#pragma mark - Info Screen & Game reset
+
 - (IBAction)showInfoScreen:(id)sender {
     //NSLog(@"show info Screen");
     
@@ -126,38 +147,63 @@
      ];
 }
 - (IBAction)hideInfoScreen:(id)sender {
+    [self hideScreen];
+}
+- (void)hideScreen
+{
     [UIView animateWithDuration:0.5f
                      animations:^{
                          [infoScreen setAlpha:0.0f];
                      }
-     ];
-    infoScreen.hidden = YES;
+                     completion:^(BOOL finished) {
+                         infoScreen.hidden = YES;
+                     }];
 }
-- (IBAction)resetGame:(id)sender {
+
+- (IBAction)resetGame:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Really reset?" message:@"Do you really want to reset this game?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    // optional - add more buttons:
+    [alert addButtonWithTitle:@"Reset"];
+    [alert setTag:12];
+    [alert show];
     
-    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
-    playerData.name = @"";
-    playerData.gender = UnKnown;
-    playerData.age = 0;
-    playerData.unlockedLevelTwo = NO;
-    playerData.unlockedLevelThree = NO;
-    playerData.unlockedLevelFour = NO;
-    playerData.unlockedDiploma = NO;
-    
-    CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
-    NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
-    CFRelease(newUniqueId);
-    playerData.deviceID = uuidString;
-    [playerData.answerValues removeAllObjects];
-    [self setUpStartscreen];
 }
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if ([alertView tag] == 12) {    // it's the Error alert
+        if (buttonIndex == 1) {     // and they clicked OK.
+            FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+            playerData.name = @"";
+            playerData.gender = UnKnown;
+            playerData.age = 0;
+            playerData.unlockedLevelTwo = NO;
+            playerData.unlockedLevelThree = NO;
+            playerData.unlockedLevelFour = NO;
+            playerData.unlockedDiploma = NO;
+            playerData.currentQuestion = 0;
+            
+            CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
+            NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
+            CFRelease(newUniqueId);
+            playerData.deviceID = uuidString;
+            [playerData.answerValues removeAllObjects];
+            [self setUpStartscreen];
+            
+            [self hideScreen];
+        }
+    }
+}
+
+
+#pragma mark - App Sharing
 
 - (IBAction)shareApp:(id)sender
 {
     if ([self.activityPopoverController isPopoverVisible]) {
         [self.activityPopoverController dismissPopoverAnimated:YES];
     } else {
-        NSString *shareText = [NSString stringWithFormat:@"Prove yourself with Coco"];
+       /* NSString *shareText = [NSString stringWithFormat:@"Prove yourself with Coco"];
         UIImage *shareImage = [UIImage imageNamed:@"coco-logo.png"];
         NSArray *activityItems = @[shareText, shareImage];
         
@@ -179,13 +225,23 @@
                                                         inView:self.view
                                       permittedArrowDirections:UIPopoverArrowDirectionAny
                                                       animated:YES];
+        */
+    
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sharing Disabled" message:@"Sharing has been disabled for Demo purposes. Sorry." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{    
+    if ([segue.identifier isEqualToString:@"showDiplomaScreen"]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Diploma in demo mode" message:@"The diploma would be disabeld until all islands are finsihed. Here's a sample how it could look like." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 @end

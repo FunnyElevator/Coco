@@ -13,12 +13,14 @@
 @interface FFAGameViewController : UIViewController {
     IBOutlet UIView *questionsView;
     IBOutlet UILabel *questionCatLabel;
-    IBOutlet UITextView *questionTextLabel;
+    IBOutlet UILabel *questionTextLabel;
     IBOutlet UIButton *answer1Button;
     IBOutlet UIButton *answer2Button;
     IBOutlet UIButton *answer3Button;
     IBOutlet UIButton *answer4Button;
     IBOutlet UIButton *answer5Button;
+    __weak IBOutlet UIImageView *badgeWrongImg;
+    __weak IBOutlet UIImageView *badgeRightImg;
     
     IBOutlet UIButton *continueButton;
     IBOutlet UITextView *tipsTextLabel;
@@ -37,12 +39,21 @@
     __weak IBOutlet UIImageView *comicImg5;
     __weak IBOutlet UIButton *comicButton;
     
+    __weak IBOutlet UIImageView *boatView;
+    __weak IBOutlet UIView *infoView2;
     
 }
 
 @property (strong) NSMutableArray *questionaireData;
+@property (strong) FFAQuestionData *currentQData;
+@property int boatPosition;
 
 - (IBAction)continueAfterQuestion:(id)sender;
 - (IBAction)finishComic:(id)sender;
 
+- (IBAction)answeredN1:(id)sender;
+- (IBAction)answeredN2:(id)sender;
+- (IBAction)answeredN3:(id)sender;
+- (IBAction)answeredN4:(id)sender;
+- (IBAction)answeredN5:(id)sender;
 @end

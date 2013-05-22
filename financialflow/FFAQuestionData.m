@@ -19,14 +19,14 @@
     singleQuestion.idCategory = inCatID;
     singleQuestion.answer1Text = inAnswer1Text;
     singleQuestion.answer1Value = inAnswer1Value;
-    singleQuestion.answer1Text = inAnswer2Text;
-    singleQuestion.answer1Value = inAnswer2Value;
-    singleQuestion.answer1Text = inAnswer3Text;
-    singleQuestion.answer1Value = inAnswer3Value;
-    singleQuestion.answer1Text = inAnswer4Text;
-    singleQuestion.answer1Value = inAnswer4Value;
-    singleQuestion.answer1Text = inAnswer5Text;
-    singleQuestion.answer1Value = inAnswer5Value;
+    singleQuestion.answer2Text = inAnswer2Text;
+    singleQuestion.answer2Value = inAnswer2Value;
+    singleQuestion.answer3Text = inAnswer3Text;
+    singleQuestion.answer3Value = inAnswer3Value;
+    singleQuestion.answer4Text = inAnswer4Text;
+    singleQuestion.answer4Value = inAnswer4Value;
+    singleQuestion.answer5Text = inAnswer5Text;
+    singleQuestion.answer5Value = inAnswer5Value;
     singleQuestion.tip = inTip;
    
     return singleQuestion;
