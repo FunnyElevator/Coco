@@ -159,8 +159,6 @@ Madagaskarilla</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-hf-VMr"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level1-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-38-RbZ"/>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-kb-7fC">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -172,6 +170,11 @@ Malediiveilla</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-hf-VMr"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="AvA-xd-7Xm"/>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-pM-hol"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="v5b-OB-mnk"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level1-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-38-RbZ"/>
                             <view hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGm-Kr-zVr">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="info-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-bP-zhO"/>
@@ -263,17 +266,18 @@ Aloita seikkailu Jamaikalta!</string>
                             <constraint firstItem="gVt-hf-VMr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="285" id="00l-fh-1cF"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="top" secondItem="5" secondAttribute="top" constant="348" id="0nw-PK-rEI"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="2dj-W7-sX2"/>
+                            <constraint firstAttribute="trailing" secondItem="v5b-OB-mnk" secondAttribute="trailing" constant="87" id="2fE-go-De4"/>
+                            <constraint firstItem="v5b-OB-mnk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="286" id="5Yv-f9-J3S"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="leading" secondItem="vK5-ob-9bn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6N7-QH-FFT"/>
                             <constraint firstItem="EeD-kb-7fC" firstAttribute="centerX" secondItem="DP8-5b-r0V" secondAttribute="centerX" type="default" id="7aX-W1-14y"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="centerX" secondItem="obf-Ap-0Q2" secondAttribute="centerX" type="default" id="A7D-hb-peN"/>
-                            <constraint firstItem="gVt-hf-VMr" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="96" id="Bhs-Lo-V4k"/>
                             <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="7VA-pZ-TbV" secondAttribute="centerX" type="default" id="CzJ-aN-loA"/>
                             <constraint firstAttribute="bottom" secondItem="7VA-pZ-TbV" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="DSq-4h-Ozp"/>
+                            <constraint firstItem="gVt-hf-VMr" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="96" id="ENm-f3-FYv"/>
                             <constraint firstAttribute="trailing" secondItem="iG7-3e-NZe" secondAttribute="trailing" constant="31" id="FMf-24-jKE"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="leading" secondItem="rcu-b3-XgB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="H0y-Yr-MTV"/>
                             <constraint firstItem="Zdy-PO-VS3" firstAttribute="top" secondItem="5" secondAttribute="top" constant="10" id="Hcb-cE-2CF"/>
                             <constraint firstItem="3WS-ap-SmD" firstAttribute="bottom" secondItem="rcu-b3-XgB" secondAttribute="bottom" type="default" id="IR1-I7-a4N"/>
-                            <constraint firstItem="AYF-xB-wJi" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="KqD-fQ-u7U"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="bottom" secondItem="obf-Ap-0Q2" secondAttribute="bottom" type="default" id="LOO-7b-JoK"/>
                             <constraint firstItem="iW2-LD-Aed" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="O5Q-Vc-Yhk"/>
                             <constraint firstItem="A8F-6y-Whk" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="41" id="OAP-MF-Poo"/>
@@ -286,14 +290,19 @@ Aloita seikkailu Jamaikalta!</string>
                             <constraint firstItem="obf-Ap-0Q2" firstAttribute="top" secondItem="3WS-ap-SmD" secondAttribute="top" type="default" id="WII-bP-Bva"/>
                             <constraint firstItem="ZgG-j5-XPy" firstAttribute="bottom" secondItem="vK5-ob-9bn" secondAttribute="bottom" type="default" id="Xzh-Cf-SGw"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="ZBW-Ht-Bzd"/>
+                            <constraint firstAttribute="trailing" secondItem="2bu-pM-hol" secondAttribute="trailing" constant="335" id="ZPP-cH-jBG"/>
                             <constraint firstItem="DP8-5b-r0V" firstAttribute="top" secondItem="obf-Ap-0Q2" secondAttribute="top" type="default" id="Zes-CU-QaE"/>
                             <constraint firstItem="vK5-ob-9bn" firstAttribute="bottom" secondItem="EeD-kb-7fC" secondAttribute="bottom" type="default" id="bVn-fz-O46"/>
                             <constraint firstAttribute="trailing" secondItem="AsC-dh-vmy" secondAttribute="trailing" constant="14" id="cAp-Bi-kJ9"/>
                             <constraint firstItem="1M9-38-RbZ" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="55" id="dsL-cV-gqT"/>
+                            <constraint firstItem="v5b-OB-mnk" firstAttribute="top" secondItem="2bu-pM-hol" secondAttribute="top" type="default" id="e8p-er-G9V"/>
                             <constraint firstAttribute="bottom" secondItem="AsC-dh-vmy" secondAttribute="bottom" constant="3" id="eIe-XF-9tm"/>
                             <constraint firstItem="rcu-b3-XgB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="150" id="hCA-ef-aCC"/>
                             <constraint firstItem="obf-Ap-0Q2" firstAttribute="bottom" secondItem="3WS-ap-SmD" secondAttribute="bottom" type="default" id="hYe-bV-Qbm"/>
+                            <constraint firstItem="AvA-xd-7Xm" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="346" id="k6A-Kk-gqq"/>
+                            <constraint firstItem="AYF-xB-wJi" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="m0K-Qi-gJj"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="mBk-qg-Nn6"/>
+                            <constraint firstItem="2bu-pM-hol" firstAttribute="top" secondItem="AvA-xd-7Xm" secondAttribute="top" type="default" id="oW1-en-0GS"/>
                             <constraint firstItem="DGm-Kr-zVr" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="ojp-IW-III"/>
                             <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="10" id="ouA-1V-Nq7"/>
                             <constraint firstItem="2ba-TY-3Ky" firstAttribute="leading" secondItem="A8F-6y-Whk" secondAttribute="leading" type="default" id="sl1-Ze-5lL"/>
@@ -324,6 +333,10 @@ Aloita seikkailu Jamaikalta!</string>
                         <outlet property="mainLabel2" destination="ZgG-j5-XPy" id="eHO-Xy-raI"/>
                         <outlet property="mainLabel3" destination="vK5-ob-9bn" id="e3L-sg-lMD"/>
                         <outlet property="mainLabel4" destination="EeD-kb-7fC" id="WFY-dF-7dn"/>
+                        <outlet property="playButtonImage1" destination="gVt-hf-VMr" id="Nf6-vo-Tj0"/>
+                        <outlet property="playButtonImage2" destination="AvA-xd-7Xm" id="LWV-67-9eB"/>
+                        <outlet property="playButtonImage3" destination="2bu-pM-hol" id="SLD-lD-kWc"/>
+                        <outlet property="playButtonImage4" destination="v5b-OB-mnk" id="QlR-P9-Wi9"/>
                         <outlet property="resetButton" destination="iWH-u6-Qo3" id="IvY-Ah-IFm"/>
                         <outlet property="shareButton" destination="iG7-3e-NZe" id="1Wl-mI-aa0"/>
                     </connections>
@@ -765,6 +778,95 @@ Aloita seikkailu Jamaikalta!</string>
         <image name="tip-bg.png" width="254" height="256"/>
         <image name="wrong-badge.png" width="50" height="51"/>
     </resources>
+    <classes>
+        <class className="FFADiplomaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFADiplomaViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="FFAGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answeredN1:"/>
+                <relationship kind="action" name="answeredN2:"/>
+                <relationship kind="action" name="answeredN3:"/>
+                <relationship kind="action" name="answeredN4:"/>
+                <relationship kind="action" name="answeredN5:"/>
+                <relationship kind="action" name="continueAfterQuestion:"/>
+                <relationship kind="action" name="finishComic:"/>
+                <relationship kind="outlet" name="answer1Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer2Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer3Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer4Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer5Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="badgeRightImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="badgeWrongImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="boatView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="comicImg1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicImg2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicImg3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicImg4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicImg5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="comicView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="continueButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoView2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="islandImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="portImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="questionCatLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="tipsTextLabel" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="tipsView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="FFAStartViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAStartViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="hideInfoScreen:"/>
+                <relationship kind="action" name="resetGame:"/>
+                <relationship kind="action" name="shareApp:"/>
+                <relationship kind="action" name="showInfoScreen:"/>
+                <relationship kind="outlet" name="backButtonInfo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flagImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="flagImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="flagImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="flagImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="getDiplomaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoScreen" candidateClass="UIView"/>
+                <relationship kind="outlet" name="infoText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="islandFourButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="islandImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="islandImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="islandImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="islandOneButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandThreeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandTwoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mainLabel1" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mainLabel2" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mainLabel3" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mainLabel4" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="playButtonImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="playButtonImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="playButtonImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="playButtonImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rewardImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rewardImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rewardImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="rewardImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

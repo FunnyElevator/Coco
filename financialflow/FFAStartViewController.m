@@ -14,7 +14,25 @@
     IBOutlet UIButton *islandThreeButton;
     IBOutlet UIButton *islandFourButton;
     
+    __weak IBOutlet UIImageView *islandImage1;
+    __weak IBOutlet UIImageView *islandImage2;
+    __weak IBOutlet UIImageView *islandImage3;
+    __weak IBOutlet UIImageView *islandImage4;
     
+    __weak IBOutlet UIImageView *playButtonImage1;
+    __weak IBOutlet UIImageView *playButtonImage2;
+    __weak IBOutlet UIImageView *playButtonImage3;
+    __weak IBOutlet UIImageView *playButtonImage4;
+    
+    __weak IBOutlet UIImageView *rewardImage1;
+    __weak IBOutlet UIImageView *rewardImage2;
+    __weak IBOutlet UIImageView *rewardImage3;
+    __weak IBOutlet UIImageView *rewardImage4;
+    
+    __weak IBOutlet UIImageView *flagImage1;
+    __weak IBOutlet UIImageView *flagImage2;
+    __weak IBOutlet UIImageView *flagImage3;
+    __weak IBOutlet UIImageView *flagImage4;
     
     IBOutlet UIButton *getDiplomaButton;
     IBOutlet UIButton *infoButton;
@@ -75,6 +93,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     NSLog(@"View appear");
+    [self setUpStartscreen];
 }
 
 - (void)setUpStartscreen {
@@ -100,37 +119,49 @@
     
 }
 - (void)resetButtonOne {
-    
+    [playButtonImage1 setHidden:NO];
 }
 - (void)resetButtonTwo {
-    
+    [islandTwoButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    [mainLabel2 setCenter:CGPointMake(384, 384)];
+    [playButtonImage2 setHidden:YES];
 }
 - (void)resetButtonThree {
-    
+    [islandThreeButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    [mainLabel3 setCenter:CGPointMake(638, 384)];
+    [playButtonImage3 setHidden:YES];
 }
 - (void)resetButtonFour {
-    
+    [islandFourButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    [mainLabel4 setCenter:CGPointMake(886, 384)];
+    [playButtonImage4 setHidden:YES];
 }
 - (void)unlockButtonTwo {
     [islandTwoButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [mainLabel2 setCenter:CGPointMake(384, 236)];
+    [playButtonImage2 setHidden:NO];
 }
 - (void)unlockButtonThree {
     [islandThreeButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [mainLabel3 setCenter:CGPointMake(638, 236)];
+    [playButtonImage3 setHidden:NO];
 }
 - (void)unlockButtonFour {
     [islandFourButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [mainLabel4 setCenter:CGPointMake(886, 236)];
+    [playButtonImage4 setHidden:NO];
 }
 - (void)finishButtonOne {
-    
+    [playButtonImage1 setHidden:YES];
 }
 - (void)finishButtonTwo {
-    
+    [playButtonImage2 setHidden:YES];
 }
 - (void)finishButtonThree {
-    
+    [playButtonImage3 setHidden:YES];
 }
 - (void)finishButtonFour {
-    
+    [playButtonImage4 setHidden:YES];
 }
 
 
@@ -163,7 +194,6 @@
 - (IBAction)resetGame:(id)sender
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Really reset?" message:@"Do you really want to reset this game?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-    // optional - add more buttons:
     [alert addButtonWithTitle:@"Reset"];
     [alert setTag:12];
     [alert show];
@@ -171,8 +201,8 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if ([alertView tag] == 12) {    // it's the Error alert
-        if (buttonIndex == 1) {     // and they clicked OK.
+    if ([alertView tag] == 12) {    
+        if (buttonIndex == 1) {    
             FFAPlayer *playerData = [FFAPlayer sharedPlayer];
             playerData.name = @"";
             playerData.gender = UnKnown;
@@ -239,7 +269,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {    
     if ([segue.identifier isEqualToString:@"showDiplomaScreen"]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Diploma in demo mode" message:@"The diploma would be disabeld until all islands are finsihed. Here's a sample how it could look like." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Diploma in demo mode" message:@"The diploma would be disabled until all islands are finished. Here's a sample how it could look like." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 }
