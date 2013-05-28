@@ -9,10 +9,10 @@
 #import "FFAStartViewController.h"
 
 @interface FFAStartViewController () {
-    IBOutlet UIButton *islandOneButton;
-    IBOutlet UIButton *islandTwoButton;
-    IBOutlet UIButton *islandThreeButton;
-    IBOutlet UIButton *islandFourButton;
+    IBOutlet UIButton *islandButton1;
+    IBOutlet UIButton *islandButton2;
+    IBOutlet UIButton *islandButton3;
+    IBOutlet UIButton *islandButton4;
     
     __weak IBOutlet UIImageView *islandImage1;
     __weak IBOutlet UIImageView *islandImage2;
@@ -24,15 +24,20 @@
     __weak IBOutlet UIImageView *playButtonImage3;
     __weak IBOutlet UIImageView *playButtonImage4;
     
-    __weak IBOutlet UIImageView *rewardImage1;
-    __weak IBOutlet UIImageView *rewardImage2;
-    __weak IBOutlet UIImageView *rewardImage3;
-    __weak IBOutlet UIImageView *rewardImage4;
+    __weak IBOutlet UIImageView *landmapImage1;
+    __weak IBOutlet UIImageView *landmapImage2;
+    __weak IBOutlet UIImageView *landmapImage3;
+    __weak IBOutlet UIImageView *landmapImage4;
     
     __weak IBOutlet UIImageView *flagImage1;
     __weak IBOutlet UIImageView *flagImage2;
     __weak IBOutlet UIImageView *flagImage3;
     __weak IBOutlet UIImageView *flagImage4;
+    
+    __weak IBOutlet UIImageView *boatImage1;
+    __weak IBOutlet UIImageView *boatImage2;
+    __weak IBOutlet UIImageView *boatImage3;
+    __weak IBOutlet UIImageView *boatImage4;
     
     IBOutlet UIButton *getDiplomaButton;
     IBOutlet UIButton *infoButton;
@@ -89,6 +94,8 @@
     //playerData.name = @"It's me!";
     NSLog(@"View loaded");
     
+    
+    
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -96,73 +103,136 @@
     [self setUpStartscreen];
 }
 
-- (void)setUpStartscreen {
+- (void)setUpStartscreen {    
     FFAPlayer *playerData = [FFAPlayer sharedPlayer];
     if (playerData.unlockedLevelTwo== YES) {
         [self unlockButtonTwo];
-        [self finishButtonOne];
+        [playButtonImage1 setHidden:YES];
+        [islandImage2 setHidden:NO];
+        if (playerData.pointsInLevel1 > 0)   {  [landmapImage1 setHidden:NO]; }
+        if (playerData.pointsInLevel1 > 50)  {  [flagImage1 setHidden:NO]; }
+        if (playerData.pointsInLevel1 > 100) {  [boatImage1 setHidden:NO]; }
         
     } else {
         [self resetButtonOne];
-    }
-    if (playerData.unlockedLevelThree == YES) {
-        [self unlockButtonThree];
-        [self finishButtonTwo];
-    } 
-    if (playerData.unlockedLevelFour == YES) {
-        [self unlockButtonFour];
-        [self finishButtonThree];
-    }
-    if (playerData.unlockedDiploma == YES) {
-        [self finishButtonFour];
+        [islandImage2 setHidden:YES];
+        [landmapImage1 setHidden:YES];
+        [flagImage1 setHidden:YES];
+        [boatImage1 setHidden:YES];
     }
     
+    if (playerData.unlockedLevelThree == YES) {
+        [self unlockButtonThree];
+        [playButtonImage2 setHidden:YES];
+        [islandImage2 setHidden:NO];
+        if (playerData.pointsInLevel2 > 0)   {  [landmapImage2 setHidden:NO]; }
+        if (playerData.pointsInLevel2 > 50)  {  [flagImage2 setHidden:NO]; }
+        if (playerData.pointsInLevel2 > 100) {  [boatImage2 setHidden:NO]; }
+    } else {
+        [self resetButtonTwo];
+        [islandImage3 setHidden:YES];
+        [landmapImage2 setHidden:YES];
+        [flagImage2 setHidden:YES];
+        [boatImage2 setHidden:YES];
+    }
+    
+    if (playerData.unlockedLevelFour == YES) {
+        [self unlockButtonFour];
+        [playButtonImage3 setHidden:YES];
+        [islandImage4 setHidden:NO];
+        if (playerData.pointsInLevel3 > 0)   {  [landmapImage3 setHidden:NO]; }
+        if (playerData.pointsInLevel3 > 50)  {  [flagImage3 setHidden:NO]; }
+        if (playerData.pointsInLevel3 > 100) {  [boatImage3 setHidden:NO]; }
+    } else {
+        [self resetButtonThree];
+        [islandImage4 setHidden:YES];
+        [landmapImage3 setHidden:YES];
+        [flagImage3 setHidden:YES];
+        [boatImage3 setHidden:YES];
+    }
+    
+    if (playerData.unlockedDiploma == YES) {
+        [playButtonImage4 setHidden:YES];
+        if (playerData.pointsInLevel4 > 0)   {  [landmapImage4 setHidden:NO]; }
+        if (playerData.pointsInLevel4 > 50)  {  [flagImage4 setHidden:NO]; }
+        if (playerData.pointsInLevel4 > 100) {  [boatImage4 setHidden:NO]; }
+    } else {
+        [self resetButtonFour];
+        [landmapImage4 setHidden:YES];
+        [flagImage4 setHidden:YES];
+        [boatImage4 setHidden:YES];
+        
+    }
+
+        
 }
 - (void)resetButtonOne {
     [playButtonImage1 setHidden:NO];
 }
 - (void)resetButtonTwo {
-    [islandTwoButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
-    [mainLabel2 setCenter:CGPointMake(384, 384)];
+    [islandButton2 setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    mainLabel2.translatesAutoresizingMaskIntoConstraints=YES;
+    CGRect frameLabel = mainLabel2.frame;
+    frameLabel.origin.y = 348;
+    mainLabel2.frame = frameLabel;
+    //[mainLabel2 setCenter:CGPointMake(384, 384)];
     [playButtonImage2 setHidden:YES];
 }
 - (void)resetButtonThree {
-    [islandThreeButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
-    [mainLabel3 setCenter:CGPointMake(638, 384)];
+    [islandButton3 setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    mainLabel3.translatesAutoresizingMaskIntoConstraints=YES;
+    CGRect frameLabel = mainLabel3.frame;
+    frameLabel.origin.y = 348;
+    mainLabel3.frame = frameLabel;
+    //[mainLabel3 setCenter:CGPointMake(638, 384)];
     [playButtonImage3 setHidden:YES];
 }
 - (void)resetButtonFour {
-    [islandFourButton setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
-    [mainLabel4 setCenter:CGPointMake(886, 384)];
+    [islandButton4 setImage:[UIImage imageNamed:@"main-level-closed.png"] forState:UIControlStateNormal];
+    mainLabel4.translatesAutoresizingMaskIntoConstraints=YES;;
+    CGRect frameLabel = mainLabel4.frame;
+    frameLabel.origin.y = 348;
+    mainLabel4.frame = frameLabel;
+    //[mainLabel4 setCenter:CGPointMake(886, 384)];
     [playButtonImage4 setHidden:YES];
 }
+
+
 - (void)unlockButtonTwo {
-    [islandTwoButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
-    [mainLabel2 setCenter:CGPointMake(384, 236)];
+    [islandButton2 setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [islandButton2 setEnabled:YES];
+    
+    mainLabel2.translatesAutoresizingMaskIntoConstraints=YES;
+    CGRect frameLabel = mainLabel2.frame;
+    frameLabel.origin.y = 200;
+    mainLabel2.frame = frameLabel;
+    //[mainLabel2 setCenter:CGPointMake(384, 236)];
     [playButtonImage2 setHidden:NO];
 }
 - (void)unlockButtonThree {
-    [islandThreeButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
-    [mainLabel3 setCenter:CGPointMake(638, 236)];
+    [islandButton3 setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [islandButton3 setEnabled:YES];
+    
+    mainLabel3.translatesAutoresizingMaskIntoConstraints=YES;
+    CGRect frameLabel = mainLabel3.frame;
+    frameLabel.origin.y = 200;
+    mainLabel3.frame = frameLabel;
+    //[mainLabel3 setCenter:CGPointMake(638, 236)];
     [playButtonImage3 setHidden:NO];
 }
 - (void)unlockButtonFour {
-    [islandFourButton setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
-    [mainLabel4 setCenter:CGPointMake(886, 236)];
+    [islandButton4 setImage:[UIImage imageNamed:@"main-level-bg.png"] forState:UIControlStateNormal];
+    [islandButton4 setEnabled:YES];
+    
+    mainLabel4.translatesAutoresizingMaskIntoConstraints=YES;
+    CGRect frameLabel = mainLabel4.frame;
+    frameLabel.origin.y = 200;
+    mainLabel4.frame = frameLabel;
+    //[mainLabel4 setCenter:CGPointMake(886, 236)];
     [playButtonImage4 setHidden:NO];
+    NSLog(@"label moved");
 }
-- (void)finishButtonOne {
-    [playButtonImage1 setHidden:YES];
-}
-- (void)finishButtonTwo {
-    [playButtonImage2 setHidden:YES];
-}
-- (void)finishButtonThree {
-    [playButtonImage3 setHidden:YES];
-}
-- (void)finishButtonFour {
-    [playButtonImage4 setHidden:YES];
-}
+
 
 
 #pragma mark - Info Screen & Game reset
@@ -212,7 +282,12 @@
             playerData.unlockedLevelFour = NO;
             playerData.unlockedDiploma = NO;
             playerData.currentQuestion = 0;
-            
+            playerData.pointsInLevel1 = 0;
+            playerData.pointsInLevel2 = 0;
+            playerData.pointsInLevel3 = 0;
+            playerData.pointsInLevel4 = 0;
+            playerData.boatPosX = 0.0;
+            playerData.boatPosY = 0.0;
             CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
             NSString * uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(kCFAllocatorDefault, newUniqueId);
             CFRelease(newUniqueId);

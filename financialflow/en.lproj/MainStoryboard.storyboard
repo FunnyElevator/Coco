@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,15 +12,21 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYF-xB-wJi"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="round-button-behind.png" translatesAutoresizingMaskIntoConstraints="NO" id="AsC-dh-vmy"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="round-button-behind.png" translatesAutoresizingMaskIntoConstraints="NO" id="iW2-LD-Aed"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="diploma-button-behind.png" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-SQ-2C4"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcu-b3-XgB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="AYF-xB-wJi">
+                                <rect key="frame" x="0.0" y="-10" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="round-button-behind.png" id="AsC-dh-vmy">
+                                <rect key="frame" x="892" y="594" width="119" height="151"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="round-button-behind.png" id="iW2-LD-Aed">
+                                <rect key="frame" x="10" y="597" width="119" height="151"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="diploma-button-behind.png" id="QaY-SQ-2C4">
+                                <rect key="frame" x="296" y="575" width="432" height="171"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="rcu-b3-XgB">
+                                <rect key="frame" x="13" y="150" width="269" height="479"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="479" id="XQ2-cD-4KZ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title=" " backgroundImage="main-level-bg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,10 +39,8 @@
                                     <segue destination="MQ6-RG-LLQ" kind="modal" modalTransitionStyle="crossDissolve" id="xp9-54-1pM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obf-Ap-0Q2">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="DTd-yd-oOb"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="obf-Ap-0Q2">
+                                <rect key="frame" x="503" y="150" width="269" height="479"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title=" " image="main-level-closed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,10 +50,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DP8-5b-r0V">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="l9M-GG-4lH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DP8-5b-r0V">
+                                <rect key="frame" x="751" y="150" width="269" height="479"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title=" " image="main-level-closed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,10 +61,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="top" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-ap-SmD">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="eby-Oc-WeU"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="top" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3WS-ap-SmD">
+                                <rect key="frame" x="252" y="150" width="269" height="479"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="main-level-closed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,10 +72,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iG7-3e-NZe">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="wbe-zy-8yb"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iG7-3e-NZe">
+                                <rect key="frame" x="919" y="640" width="75" height="76"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="34"/>
                                 <state key="normal" title="+" backgroundImage="round-button-bg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,11 +86,8 @@
                                     <action selector="shareApp:" destination="2" eventType="touchUpInside" id="zA7-Pb-IBC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-TY-3Ky">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="8Ft-p0-fej"/>
-                                    <constraint firstAttribute="width" constant="75" id="oyS-ks-RcN"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2ba-TY-3Ky">
+                                <rect key="frame" x="41" y="640" width="75" height="76"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="24"/>
                                 <state key="normal" title="i" backgroundImage="round-button-bg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -102,11 +97,8 @@
                                     <action selector="showInfoScreen:" destination="2" eventType="touchUpInside" id="iPC-QE-GBn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VA-pZ-TbV">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="0kb-BS-UJR"/>
-                                    <constraint firstAttribute="width" constant="347" id="s4x-CC-1Gq"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7VA-pZ-TbV">
+                                <rect key="frame" x="338" y="616" width="347" height="116"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tilaa Diplomisi" backgroundImage="diploma-button-bg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,71 +111,113 @@
                                     <segue destination="2Z0-qP-M19" kind="modal" identifier="showDiplomaScreen" modalTransitionStyle="crossDissolve" id="51s-aI-IAf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-PO-VS3">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="NbU-qz-xWd"/>
-                                    <constraint firstAttribute="width" constant="240" id="lNp-nB-YZo"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" id="Zdy-PO-VS3">
+                                <rect key="frame" x="10" y="10" width="240" height="128"/>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A8F-6y-Whk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="MCM-I6-LEk"/>
-                                    <constraint firstAttribute="width" constant="187" id="av3-xh-5v0"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" id="A8F-6y-Whk">
+                                <rect key="frame" x="41" y="200" width="187" height="72"/>
                                 <string key="text">Opi perusteet
 Jamaikalla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-j5-XPy">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" id="ZgG-j5-XPy">
+                                <rect key="frame" x="293" y="26" width="187" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="i7b-C2-LcH"/>
-                                    <constraint firstAttribute="width" constant="187" id="odv-nk-7eL"/>
-                                </constraints>
                                 <string key="text">Kierrä karikot
 Tasmaniassa</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vK5-ob-9bn">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" id="vK5-ob-9bn">
+                                <rect key="frame" x="533" y="110" width="210" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="TqN-lh-PyP"/>
-                                </constraints>
                                 <string key="text">Huomioi olosuhteet
 Madagaskarilla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-kb-7fC">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" id="EeD-kb-7fC">
+                                <rect key="frame" x="786" y="145" width="187" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="187" id="E0J-eL-6w4"/>
-                                </constraints>
                                 <string key="text">Navigoi perille
 Malediiveilla</string>
                                 <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVt-hf-VMr"/>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="AvA-xd-7Xm"/>
-                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-pM-hol"/>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="v5b-OB-mnk"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level1-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-38-RbZ"/>
-                            <view hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGm-Kr-zVr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" id="gVt-hf-VMr">
+                                <rect key="frame" x="96" y="285" width="89" height="89"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" id="AvA-xd-7Xm">
+                                <rect key="frame" x="346" y="286" width="89" height="89"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" id="2bu-pM-hol">
+                                <rect key="frame" x="601" y="286" width="89" height="89"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="play-button.png" id="v5b-OB-mnk">
+                                <rect key="frame" x="849" y="286" width="89" height="89"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level1-bg.png" id="1M9-38-RbZ">
+                                <rect key="frame" x="55" y="382" width="199" height="169"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="bottomRight" image="menu-level2-bg.png" id="mSb-y6-Nmt">
+                                <rect key="frame" x="304" y="390" width="189" height="163"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level3-bg.png" id="3J8-VF-ZQ9">
+                                <rect key="frame" x="577" y="378" width="168" height="175"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="menu-level4-bg.png" id="dpq-oj-APY">
+                                <rect key="frame" x="796" y="377" width="195" height="177"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-map.png" id="vUl-L8-Tia">
+                                <rect key="frame" x="43" y="280" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-flag.png" id="MWf-1u-q2M">
+                                <rect key="frame" x="109" y="281" width="61" height="63"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-boat.png" id="ADq-qA-fNv">
+                                <rect key="frame" x="176" y="281" width="62" height="62"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-map.png" id="zba-LM-48p">
+                                <rect key="frame" x="282" y="279" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-flag2.png" id="fKd-7D-9gK">
+                                <rect key="frame" x="349" y="282" width="61" height="63"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-boat3.png" id="hJv-fk-t5j">
+                                <rect key="frame" x="415" y="282" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-map.png" id="3bj-pp-Njw">
+                                <rect key="frame" x="536" y="283" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-flag3.png" id="FVp-pv-Rvv">
+                                <rect key="frame" x="603" y="286" width="61" height="63"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-boat3.png" id="xts-zu-OGg">
+                                <rect key="frame" x="669" y="286" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-map.png" id="raT-d4-RZ4">
+                                <rect key="frame" x="782" y="286" width="63" height="64"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-flag4.png" id="2Wb-es-oGJ">
+                                <rect key="frame" x="847" y="288" width="65" height="66"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-treasure.png" id="JKm-vV-vMw">
+                                <rect key="frame" x="914" y="289" width="64" height="64"/>
+                            </imageView>
+                            <view hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" id="DGm-Kr-zVr">
+                                <rect key="frame" x="0.0" y="0.0" width="1025" height="748"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="info-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-bP-zhO"/>
-                                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmQ-kp-BXM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="info-bg.png" id="OJG-bP-zhO">
+                                        <rect key="frame" x="154" y="108" width="717" height="532"/>
+                                    </imageView>
+                                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" editable="NO" id="pmQ-kp-BXM">
+                                        <rect key="frame" x="251" y="195" width="495" height="349"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="495" id="W5E-KS-j5d"/>
-                                            <constraint firstAttribute="height" constant="349" id="gkn-0L-arI"/>
-                                        </constraints>
                                         <string key="text">Tylsistyttääkö taloustiedon oppitunti? Haluaisitko hetkeksi paratiisisaarelle? Ole hetken huoleton ja opi talousasiat vaivattomasti. Siis ne asiat, joka kaikkien pitäisi osata, mutta joita ei oikeasti tiedetä.
 
 Matkaa paatillasi Karibian saaristosta Intian Valtamerelle ja opi hallitsemaan perusasiat, kiertämään karikot, huomioimaan olosuhteet sekä määrittämään reittisi. Aivan niin kuin talousasioissa.
@@ -194,11 +228,8 @@ Aloita seikkailu Jamaikalta!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlZ-Ix-bXz">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="518" id="0FN-Th-EA6"/>
-                                            <constraint firstAttribute="width" constant="724" id="r1b-u4-PNz"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QlZ-Ix-bXz">
+                                        <rect key="frame" x="154" y="108" width="724" height="518"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title=" ">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -211,11 +242,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="hideInfoScreen:" destination="2" eventType="touchUpInside" id="eFw-I1-n6k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWH-u6-Qo3">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="9cH-Xn-XcT"/>
-                                            <constraint firstAttribute="width" constant="150" id="pi0-Ey-d1Q"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iWH-u6-Qo3">
+                                        <rect key="frame" x="615" y="563" width="150" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Reset Game" backgroundImage="diploma-button-bg.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,11 +256,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="resetGame:" destination="2" eventType="touchUpInside" id="8f0-Mg-Ndi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-3Q-UsY">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Rfy-e6-A08"/>
-                                            <constraint firstAttribute="width" constant="150" id="eCd-kR-sik"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qNf-3Q-UsY">
+                                        <rect key="frame" x="251" y="576" width="150" height="50"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Back" backgroundImage="diploma-button-bg.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -247,88 +272,38 @@ Aloita seikkailu Jamaikalta!</string>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="OJG-bP-zhO" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="3G9-YK-JwL"/>
-                                    <constraint firstItem="QlZ-Ix-bXz" firstAttribute="bottom" secondItem="qNf-3Q-UsY" secondAttribute="bottom" type="default" id="Fss-Td-KEf"/>
-                                    <constraint firstItem="qNf-3Q-UsY" firstAttribute="leading" secondItem="DGm-Kr-zVr" secondAttribute="leading" constant="251" id="GZQ-fz-Sn9"/>
-                                    <constraint firstItem="QlZ-Ix-bXz" firstAttribute="leading" secondItem="OJG-bP-zhO" secondAttribute="leading" type="default" id="JLz-2D-pbD"/>
-                                    <constraint firstAttribute="bottom" secondItem="iWH-u6-Qo3" secondAttribute="bottom" constant="135" id="ZZI-Fh-lDz"/>
-                                    <constraint firstItem="OJG-bP-zhO" firstAttribute="centerX" secondItem="DGm-Kr-zVr" secondAttribute="centerX" type="default" id="Zq9-la-gPR"/>
-                                    <constraint firstAttribute="trailing" secondItem="iWH-u6-Qo3" secondAttribute="trailing" constant="260" id="bi5-xw-943"/>
-                                    <constraint firstItem="OJG-bP-zhO" firstAttribute="top" secondItem="QlZ-Ix-bXz" secondAttribute="top" type="default" id="lbO-fa-kzs"/>
-                                    <constraint firstItem="pmQ-kp-BXM" firstAttribute="top" secondItem="DGm-Kr-zVr" secondAttribute="top" constant="195" id="pGr-Ih-cVM"/>
-                                    <constraint firstItem="qNf-3Q-UsY" firstAttribute="leading" secondItem="pmQ-kp-BXM" secondAttribute="leading" type="default" id="ttP-ee-8Il"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gVt-hf-VMr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="285" id="00l-fh-1cF"/>
-                            <constraint firstItem="ZgG-j5-XPy" firstAttribute="top" secondItem="5" secondAttribute="top" constant="348" id="0nw-PK-rEI"/>
-                            <constraint firstItem="DGm-Kr-zVr" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="2dj-W7-sX2"/>
-                            <constraint firstAttribute="trailing" secondItem="v5b-OB-mnk" secondAttribute="trailing" constant="87" id="2fE-go-De4"/>
-                            <constraint firstItem="v5b-OB-mnk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="286" id="5Yv-f9-J3S"/>
-                            <constraint firstItem="DP8-5b-r0V" firstAttribute="leading" secondItem="vK5-ob-9bn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6N7-QH-FFT"/>
-                            <constraint firstItem="EeD-kb-7fC" firstAttribute="centerX" secondItem="DP8-5b-r0V" secondAttribute="centerX" type="default" id="7aX-W1-14y"/>
-                            <constraint firstItem="vK5-ob-9bn" firstAttribute="centerX" secondItem="obf-Ap-0Q2" secondAttribute="centerX" type="default" id="A7D-hb-peN"/>
-                            <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="7VA-pZ-TbV" secondAttribute="centerX" type="default" id="CzJ-aN-loA"/>
-                            <constraint firstAttribute="bottom" secondItem="7VA-pZ-TbV" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="DSq-4h-Ozp"/>
-                            <constraint firstItem="gVt-hf-VMr" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="96" id="ENm-f3-FYv"/>
-                            <constraint firstAttribute="trailing" secondItem="iG7-3e-NZe" secondAttribute="trailing" constant="31" id="FMf-24-jKE"/>
-                            <constraint firstItem="ZgG-j5-XPy" firstAttribute="leading" secondItem="rcu-b3-XgB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="H0y-Yr-MTV"/>
-                            <constraint firstItem="Zdy-PO-VS3" firstAttribute="top" secondItem="5" secondAttribute="top" constant="10" id="Hcb-cE-2CF"/>
-                            <constraint firstItem="3WS-ap-SmD" firstAttribute="bottom" secondItem="rcu-b3-XgB" secondAttribute="bottom" type="default" id="IR1-I7-a4N"/>
-                            <constraint firstItem="DP8-5b-r0V" firstAttribute="bottom" secondItem="obf-Ap-0Q2" secondAttribute="bottom" type="default" id="LOO-7b-JoK"/>
-                            <constraint firstItem="iW2-LD-Aed" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="O5Q-Vc-Yhk"/>
-                            <constraint firstItem="A8F-6y-Whk" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="41" id="OAP-MF-Poo"/>
-                            <constraint firstItem="QaY-SQ-2C4" firstAttribute="centerX" secondItem="DGm-Kr-zVr" secondAttribute="centerX" type="default" id="Obz-T5-udk"/>
-                            <constraint firstItem="vK5-ob-9bn" firstAttribute="top" secondItem="EeD-kb-7fC" secondAttribute="top" type="default" id="TZr-n1-5ZG"/>
-                            <constraint firstItem="iG7-3e-NZe" firstAttribute="bottom" secondItem="2ba-TY-3Ky" secondAttribute="bottom" type="default" id="Tl3-u7-4wL"/>
-                            <constraint firstItem="vK5-ob-9bn" firstAttribute="top" secondItem="ZgG-j5-XPy" secondAttribute="top" type="default" id="Uc8-WD-gay"/>
-                            <constraint firstItem="3WS-ap-SmD" firstAttribute="top" secondItem="rcu-b3-XgB" secondAttribute="top" type="default" id="Une-Eu-PhM"/>
-                            <constraint firstItem="1M9-38-RbZ" firstAttribute="top" secondItem="gVt-hf-VMr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="W1X-AW-ncS"/>
-                            <constraint firstItem="obf-Ap-0Q2" firstAttribute="top" secondItem="3WS-ap-SmD" secondAttribute="top" type="default" id="WII-bP-Bva"/>
-                            <constraint firstItem="ZgG-j5-XPy" firstAttribute="bottom" secondItem="vK5-ob-9bn" secondAttribute="bottom" type="default" id="Xzh-Cf-SGw"/>
-                            <constraint firstItem="DGm-Kr-zVr" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="ZBW-Ht-Bzd"/>
-                            <constraint firstAttribute="trailing" secondItem="2bu-pM-hol" secondAttribute="trailing" constant="335" id="ZPP-cH-jBG"/>
-                            <constraint firstItem="DP8-5b-r0V" firstAttribute="top" secondItem="obf-Ap-0Q2" secondAttribute="top" type="default" id="Zes-CU-QaE"/>
-                            <constraint firstItem="vK5-ob-9bn" firstAttribute="bottom" secondItem="EeD-kb-7fC" secondAttribute="bottom" type="default" id="bVn-fz-O46"/>
-                            <constraint firstAttribute="trailing" secondItem="AsC-dh-vmy" secondAttribute="trailing" constant="14" id="cAp-Bi-kJ9"/>
-                            <constraint firstItem="1M9-38-RbZ" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="55" id="dsL-cV-gqT"/>
-                            <constraint firstItem="v5b-OB-mnk" firstAttribute="top" secondItem="2bu-pM-hol" secondAttribute="top" type="default" id="e8p-er-G9V"/>
-                            <constraint firstAttribute="bottom" secondItem="AsC-dh-vmy" secondAttribute="bottom" constant="3" id="eIe-XF-9tm"/>
-                            <constraint firstItem="rcu-b3-XgB" firstAttribute="top" secondItem="5" secondAttribute="top" constant="150" id="hCA-ef-aCC"/>
-                            <constraint firstItem="obf-Ap-0Q2" firstAttribute="bottom" secondItem="3WS-ap-SmD" secondAttribute="bottom" type="default" id="hYe-bV-Qbm"/>
-                            <constraint firstItem="AvA-xd-7Xm" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="346" id="k6A-Kk-gqq"/>
-                            <constraint firstItem="AYF-xB-wJi" firstAttribute="centerY" secondItem="DGm-Kr-zVr" secondAttribute="centerY" type="default" id="m0K-Qi-gJj"/>
-                            <constraint firstItem="DGm-Kr-zVr" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="mBk-qg-Nn6"/>
-                            <constraint firstItem="2bu-pM-hol" firstAttribute="top" secondItem="AvA-xd-7Xm" secondAttribute="top" type="default" id="oW1-en-0GS"/>
-                            <constraint firstItem="DGm-Kr-zVr" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="ojp-IW-III"/>
-                            <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="10" id="ouA-1V-Nq7"/>
-                            <constraint firstItem="2ba-TY-3Ky" firstAttribute="leading" secondItem="A8F-6y-Whk" secondAttribute="leading" type="default" id="sl1-Ze-5lL"/>
-                            <constraint firstItem="rcu-b3-XgB" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="13" id="u8E-ZQ-MQZ"/>
-                            <constraint firstItem="Zdy-PO-VS3" firstAttribute="leading" secondItem="iW2-LD-Aed" secondAttribute="leading" type="default" id="uUB-EV-Q0L"/>
-                            <constraint firstItem="AYF-xB-wJi" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="uZR-Eb-xFI"/>
-                            <constraint firstAttribute="bottom" secondItem="2ba-TY-3Ky" secondAttribute="bottom" constant="32" id="vmn-Lb-y8h"/>
-                            <constraint firstItem="3WS-ap-SmD" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="252" id="wq6-Yq-B5Z"/>
-                            <constraint firstItem="A8F-6y-Whk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="200" id="x5S-gk-kRc"/>
-                            <constraint firstItem="obf-Ap-0Q2" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="503" id="yDB-5l-bGh"/>
-                            <constraint firstAttribute="bottom" secondItem="QaY-SQ-2C4" secondAttribute="bottom" constant="6" id="z8B-hG-g1p"/>
-                            <constraint firstItem="iG7-3e-NZe" firstAttribute="top" secondItem="2ba-TY-3Ky" secondAttribute="top" type="default" id="zp6-5o-c5R"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="backButtonInfo" destination="qNf-3Q-UsY" id="7xA-Ci-7iS"/>
+                        <outlet property="boatImage1" destination="ADq-qA-fNv" id="HBJ-Oj-8yN"/>
+                        <outlet property="boatImage2" destination="hJv-fk-t5j" id="o3a-Fx-hF7"/>
+                        <outlet property="boatImage3" destination="xts-zu-OGg" id="qJN-dJ-OoT"/>
+                        <outlet property="boatImage4" destination="JKm-vV-vMw" id="8EM-41-6RI"/>
+                        <outlet property="flagImage1" destination="MWf-1u-q2M" id="xna-Kj-b0X"/>
+                        <outlet property="flagImage2" destination="fKd-7D-9gK" id="PFb-i5-WRD"/>
+                        <outlet property="flagImage3" destination="FVp-pv-Rvv" id="QDY-Bn-VSg"/>
+                        <outlet property="flagImage4" destination="2Wb-es-oGJ" id="HF4-ci-m1P"/>
                         <outlet property="getDiplomaButton" destination="7VA-pZ-TbV" id="sOl-qS-F7q"/>
                         <outlet property="infoButton" destination="2ba-TY-3Ky" id="R7s-MG-YMz"/>
                         <outlet property="infoScreen" destination="DGm-Kr-zVr" id="47J-Zq-m9X"/>
                         <outlet property="infoText" destination="pmQ-kp-BXM" id="Hv5-nx-eoZ"/>
-                        <outlet property="islandFourButton" destination="DP8-5b-r0V" id="r6t-wA-MDe"/>
-                        <outlet property="islandOneButton" destination="rcu-b3-XgB" id="4oU-Ku-1Op"/>
-                        <outlet property="islandThreeButton" destination="obf-Ap-0Q2" id="VgB-HZ-SpK"/>
-                        <outlet property="islandTwoButton" destination="3WS-ap-SmD" id="b1S-Fa-oyd"/>
+                        <outlet property="islandButton1" destination="rcu-b3-XgB" id="a6D-yy-ITp"/>
+                        <outlet property="islandButton2" destination="3WS-ap-SmD" id="Hpf-KD-YzJ"/>
+                        <outlet property="islandButton3" destination="obf-Ap-0Q2" id="H99-b2-lVI"/>
+                        <outlet property="islandButton4" destination="DP8-5b-r0V" id="9Ib-qj-Glq"/>
+                        <outlet property="islandImage1" destination="1M9-38-RbZ" id="3Nl-8h-I5f"/>
+                        <outlet property="islandImage2" destination="mSb-y6-Nmt" id="EVY-qs-3dS"/>
+                        <outlet property="islandImage3" destination="3J8-VF-ZQ9" id="zSB-Ge-BIb"/>
+                        <outlet property="islandImage4" destination="dpq-oj-APY" id="E6e-AD-efb"/>
+                        <outlet property="landmapImage1" destination="vUl-L8-Tia" id="ggF-yM-Tsi"/>
+                        <outlet property="landmapImage2" destination="zba-LM-48p" id="7Gx-Y6-pw5"/>
+                        <outlet property="landmapImage3" destination="3bj-pp-Njw" id="es4-H1-FmX"/>
+                        <outlet property="landmapImage4" destination="raT-d4-RZ4" id="Tiw-g2-aY9"/>
                         <outlet property="mainLabel1" destination="A8F-6y-Whk" id="iC0-28-juT"/>
                         <outlet property="mainLabel2" destination="ZgG-j5-XPy" id="eHO-Xy-raI"/>
                         <outlet property="mainLabel3" destination="vK5-ob-9bn" id="e3L-sg-lMD"/>
@@ -352,27 +327,20 @@ Aloita seikkailu Jamaikalta!</string>
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-s9-Zbn" userLabel="Sea View">
+                            <view contentMode="scaleToFill" id="hZ7-s9-Zbn" userLabel="Sea View">
+                                <rect key="frame" x="263" y="0.0" width="761" height="748"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="sea.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZUQ-Bk-tdw"/>
-                                    <imageView userInteractionEnabled="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="bXn-nY-rr0">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="DDo-3f-XXQ"/>
-                                            <constraint firstAttribute="height" constant="450" id="aPa-kn-XQw"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="sea.png" id="ZUQ-Bk-tdw">
+                                        <rect key="frame" x="0.0" y="0.0" width="764" height="748"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-Qz-fff">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="700" id="1Xj-5s-uWg"/>
-                                            <constraint firstAttribute="width" constant="318" id="zcQ-Dm-FnA"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="left" id="bXn-nY-rr0">
+                                        <rect key="frame" x="-2" y="182" width="240" height="450"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="boat1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBn-uR-fyf"/>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHz-UR-Sev">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="262" id="4aA-Oe-xQk"/>
-                                            <constraint firstAttribute="height" constant="86" id="cYM-NO-CYM"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="right" id="dDZ-Qz-fff">
+                                        <rect key="frame" x="443" y="30" width="318" height="700"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hHz-UR-Sev">
+                                        <rect key="frame" x="244" y="642" width="262" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="  Jatka  " backgroundImage="diploma-button-bg.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -385,11 +353,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="continueAfterQuestion:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="Dkc-ee-g4Y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG8-zB-LuX">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="25Y-RF-ySl"/>
-                                            <constraint firstAttribute="width" constant="134" id="B4S-56-Aa5"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bG8-zB-LuX">
+                                        <rect key="frame" x="607" y="20" width="134" height="54"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Main Menu" backgroundImage="diploma-button-bg.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -399,39 +364,134 @@ Aloita seikkailu Jamaikalta!</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="2" kind="modal" modalTransitionStyle="crossDissolve" id="K1u-l3-B9T"/>
+                                            <action selector="closeGameField:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="oxZ-wT-Ds3"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="k7N-rg-fvW">
+                                        <rect key="frame" x="250" y="397" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="T7B-hQ-p3E">
+                                        <rect key="frame" x="250" y="407" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="1JU-nl-rmQ">
+                                        <rect key="frame" x="250" y="417" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="Ot2-6a-pon">
+                                        <rect key="frame" x="250" y="427" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="KMl-pv-oWx">
+                                        <rect key="frame" x="250" y="437" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="map-line.png" id="bFP-G8-9kO">
+                                        <rect key="frame" x="250" y="447" width="100" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="SjT-lh-2pw">
+                                        <rect key="frame" x="67" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="gSF-8w-XW6">
+                                        <rect key="frame" x="152" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="TT5-Qk-Aif">
+                                        <rect key="frame" x="237" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="nn2-iO-1PI">
+                                        <rect key="frame" x="322" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="x6r-ip-zOf">
+                                        <rect key="frame" x="412" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="qpF-Ie-qcd">
+                                        <rect key="frame" x="502" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="MM2-U1-GRV">
+                                        <rect key="frame" x="587" y="412" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title=" " image="map-point.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="boat1.png" id="RBn-uR-fyf">
+                                        <rect key="frame" x="50" y="265" width="180" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="dDZ-Qz-fff" firstAttribute="trailing" secondItem="hZ7-s9-Zbn" secondAttribute="trailing" type="default" id="AZs-ou-H0r"/>
-                                    <constraint firstItem="hHz-UR-Sev" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" constant="244" id="DRc-85-aGs"/>
-                                    <constraint firstAttribute="bottom" secondItem="hHz-UR-Sev" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Fks-7Q-rAJ"/>
-                                    <constraint firstItem="RBn-uR-fyf" firstAttribute="centerY" secondItem="ZUQ-Bk-tdw" secondAttribute="centerY" type="default" id="ODJ-R5-UfZ"/>
-                                    <constraint firstItem="bXn-nY-rr0" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="182" id="WCP-b4-3f3"/>
-                                    <constraint firstItem="dDZ-Qz-fff" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="30" id="aSM-ZQ-tsd"/>
-                                    <constraint firstItem="ZUQ-Bk-tdw" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" type="default" id="alw-4X-mkW"/>
-                                    <constraint firstItem="RBn-uR-fyf" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" constant="98" id="gd6-b0-X7h"/>
-                                    <constraint firstItem="bG8-zB-LuX" firstAttribute="top" secondItem="hZ7-s9-Zbn" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ghW-xf-zNv"/>
-                                    <constraint firstAttribute="trailing" secondItem="bG8-zB-LuX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hPu-KJ-gNX"/>
-                                    <constraint firstItem="ZUQ-Bk-tdw" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" type="default" id="p15-3O-Kok"/>
-                                    <constraint firstItem="ZUQ-Bk-tdw" firstAttribute="bottom" secondItem="hZ7-s9-Zbn" secondAttribute="bottom" type="default" id="vLS-e3-26x"/>
-                                    <constraint firstItem="bXn-nY-rr0" firstAttribute="leading" secondItem="hZ7-s9-Zbn" secondAttribute="leading" constant="-2" id="waw-EH-k9E"/>
-                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pla-jY-T4a" userLabel="View Questions View">
+                            <view contentMode="scaleToFill" id="Pla-jY-T4a" userLabel="View Questions View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="sidebar-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="lb4-jH-0ZR">
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="sidebar-bg.png" id="lb4-jH-0ZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="269" height="768"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="269" id="UaE-Av-0ml"/>
-                                        </constraints>
                                     </imageView>
-                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-V2-ZGG">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="239" id="NIS-Wb-ejq"/>
-                                        </constraints>
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" id="5bp-V2-ZGG">
+                                        <rect key="frame" x="15" y="151" width="239" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -444,7 +504,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="answeredN1:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="tai-Ve-ths"/>
                                         </connections>
                                     </button>
-                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-sA-fvf">
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" id="sdk-sA-fvf">
+                                        <rect key="frame" x="15" y="237" width="239" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -457,7 +518,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="answeredN2:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="iGL-e9-EhH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yq0-6r-uPO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" id="yq0-6r-uPO">
+                                        <rect key="frame" x="15" y="321" width="239" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -470,10 +532,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="answeredN3:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="rpr-kE-Ek2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="J7m-UP-HfU">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="UTn-ug-jWK"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" id="J7m-UP-HfU">
+                                        <rect key="frame" x="15" y="408" width="240" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -486,7 +546,8 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="answeredN4:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="t2X-xb-tdO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="39c-qa-HNg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" id="39c-qa-HNg">
+                                        <rect key="frame" x="15" y="494" width="239" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button Button Button Button Button Button Button Button Button Button Button Button " backgroundImage="answer-button-normal.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -499,102 +560,69 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="answeredN5:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="DVd-N9-7bT"/>
                                         </connections>
                                     </button>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaV-ke-ewi">
+                                    <view opaque="NO" contentMode="scaleToFill" id="KaV-ke-ewi">
+                                        <rect key="frame" x="6" y="760" width="254" height="256"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="tip-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-5G-KXh"/>
-                                            <textView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-Ic-jsH">
+                                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" image="tip-bg.png" id="7Pl-5G-KXh">
+                                                <rect key="frame" x="0.0" y="0.0" width="254" height="256"/>
+                                            </imageView>
+                                            <textView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="rkx-Ic-jsH">
+                                                <rect key="frame" x="25" y="37" width="209" height="118"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="209" id="eTq-4f-sOj"/>
-                                                    <constraint firstAttribute="height" constant="118" id="xo4-UC-80X"/>
-                                                </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="7Pl-5G-KXh" firstAttribute="bottom" secondItem="KaV-ke-ewi" secondAttribute="bottom" type="default" id="01d-sO-IgK"/>
-                                            <constraint firstAttribute="trailing" secondItem="rkx-Ic-jsH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="B0s-0A-dMJ"/>
-                                            <constraint firstItem="7Pl-5G-KXh" firstAttribute="trailing" secondItem="KaV-ke-ewi" secondAttribute="trailing" type="default" id="OJv-GJ-dfC"/>
-                                            <constraint firstItem="7Pl-5G-KXh" firstAttribute="top" secondItem="KaV-ke-ewi" secondAttribute="top" type="default" id="nLm-iQ-MdX"/>
-                                            <constraint firstItem="rkx-Ic-jsH" firstAttribute="top" secondItem="KaV-ke-ewi" secondAttribute="top" constant="37" id="x1x-Sl-6tm"/>
-                                            <constraint firstItem="7Pl-5G-KXh" firstAttribute="leading" secondItem="KaV-ke-ewi" secondAttribute="leading" type="default" id="ybd-B8-JxH"/>
-                                        </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="225" translatesAutoresizingMaskIntoConstraints="NO" id="Yyj-yg-UFO">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="taj-ND-0cB"/>
-                                            <constraint firstAttribute="width" constant="225" id="yNx-nw-uQA"/>
-                                        </constraints>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yyj-yg-UFO">
+                                        <rect key="frame" x="20" y="67" width="225" height="80"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flag1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-i8-7WY"/>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CategoryTitel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ4-ga-Vob">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="236" id="EvQ-9H-12x"/>
-                                            <constraint firstAttribute="height" constant="38" id="LP0-eF-s3U"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flag1.png" id="hlX-i8-7WY">
+                                        <rect key="frame" x="-12" y="7" width="328" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CategoryTitel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UJ4-ga-Vob">
+                                        <rect key="frame" x="33" y="18" width="236" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="wrong-badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="apM-zj-sGp"/>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="right-badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="qZU-2D-0YS"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="wrong-badge.png" id="apM-zj-sGp">
+                                        <rect key="frame" x="214" y="142" width="50" height="51"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="right-badge.png" id="qZU-2D-0YS">
+                                        <rect key="frame" x="210" y="230" width="50" height="51"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="apM-zj-sGp" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="142" id="1Ew-OD-Edd"/>
-                                    <constraint firstItem="hlX-i8-7WY" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="7" id="2TK-TB-ULo"/>
-                                    <constraint firstItem="lb4-jH-0ZR" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" type="default" id="3xV-04-riT"/>
-                                    <constraint firstItem="39c-qa-HNg" firstAttribute="trailing" secondItem="yq0-6r-uPO" secondAttribute="trailing" type="default" id="8Fo-mM-nQ3"/>
-                                    <constraint firstItem="yq0-6r-uPO" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="321" id="9mI-5Q-uJz"/>
-                                    <constraint firstItem="J7m-UP-HfU" firstAttribute="leading" secondItem="yq0-6r-uPO" secondAttribute="leading" type="default" id="D3r-L8-B8l"/>
-                                    <constraint firstItem="5bp-V2-ZGG" firstAttribute="trailing" secondItem="sdk-sA-fvf" secondAttribute="trailing" type="default" id="DQa-ym-fiS"/>
-                                    <constraint firstItem="yq0-6r-uPO" firstAttribute="leading" secondItem="sdk-sA-fvf" secondAttribute="leading" type="default" id="Hsb-vp-EtE"/>
-                                    <constraint firstItem="sdk-sA-fvf" firstAttribute="leading" secondItem="5bp-V2-ZGG" secondAttribute="leading" type="default" id="Jzm-l6-NGA"/>
-                                    <constraint firstItem="J7m-UP-HfU" firstAttribute="centerX" secondItem="lb4-jH-0ZR" secondAttribute="centerX" type="default" id="Qy6-bN-IZ9"/>
-                                    <constraint firstItem="yq0-6r-uPO" firstAttribute="trailing" secondItem="sdk-sA-fvf" secondAttribute="trailing" type="default" id="W1P-sM-IDN"/>
-                                    <constraint firstItem="KaV-ke-ewi" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="590" id="X5A-gd-uAo"/>
-                                    <constraint firstItem="qZU-2D-0YS" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="230" id="YRy-Ow-Ofw"/>
-                                    <constraint firstItem="lb4-jH-0ZR" firstAttribute="trailing" secondItem="UJ4-ga-Vob" secondAttribute="trailing" type="default" id="Ypy-GT-jLT"/>
-                                    <constraint firstAttribute="bottom" secondItem="J7m-UP-HfU" secondAttribute="bottom" constant="306" id="ZHa-b4-T7H"/>
-                                    <constraint firstItem="J7m-UP-HfU" firstAttribute="leading" secondItem="39c-qa-HNg" secondAttribute="leading" type="default" id="ayN-c8-ZpK"/>
-                                    <constraint firstAttribute="trailing" secondItem="apM-zj-sGp" secondAttribute="trailing" constant="56" id="dDO-JB-W8N"/>
-                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="centerX" secondItem="KaV-ke-ewi" secondAttribute="centerX" type="default" id="ioP-f7-ery"/>
-                                    <constraint firstItem="lb4-jH-0ZR" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" type="default" id="jbD-dJ-mJc"/>
-                                    <constraint firstItem="5bp-V2-ZGG" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="151" id="nKI-LF-HPT"/>
-                                    <constraint firstAttribute="bottom" secondItem="39c-qa-HNg" secondAttribute="bottom" constant="220" id="q3r-x4-1la"/>
-                                    <constraint firstItem="qZU-2D-0YS" firstAttribute="trailing" secondItem="KaV-ke-ewi" secondAttribute="trailing" type="default" id="qkY-o9-4SX"/>
-                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="67" id="sDd-zO-03h"/>
-                                    <constraint firstItem="Yyj-yg-UFO" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="taR-Me-ldO"/>
-                                    <constraint firstItem="hlX-i8-7WY" firstAttribute="centerY" secondItem="UJ4-ga-Vob" secondAttribute="centerY" type="default" id="uOf-sm-fUn"/>
-                                    <constraint firstItem="hlX-i8-7WY" firstAttribute="leading" secondItem="Pla-jY-T4a" secondAttribute="leading" constant="-12" id="vUQ-JU-Wxj"/>
-                                    <constraint firstItem="sdk-sA-fvf" firstAttribute="top" secondItem="Pla-jY-T4a" secondAttribute="top" constant="237" id="wlM-YR-xG3"/>
-                                </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-cF-JZK" userLabel="Comic View">
+                            <view hidden="YES" contentMode="scaleToFill" id="cjx-cF-JZK" userLabel="Comic View">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-OJ-1Ex"/>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="comic1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0st-cI-I3S"/>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="RFn-ag-4B4">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="359" id="NtL-PC-bPP"/>
-                                            <constraint firstAttribute="width" constant="466" id="kJ0-z1-xDR"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="background.png" id="VkX-OJ-1Ex">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic3.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-vB-dX0"/>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic4.png" translatesAutoresizingMaskIntoConstraints="NO" id="VXk-qw-ZqO"/>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic5.png" translatesAutoresizingMaskIntoConstraints="NO" id="nb5-D3-G2D">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="416" id="Ycs-HO-rYw"/>
-                                            <constraint firstAttribute="height" constant="298" id="grg-dG-bBa"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="comic1.png" id="0st-cI-I3S">
+                                        <rect key="frame" x="4" y="59" width="543" height="352"/>
                                     </imageView>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4by-vF-w4y">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic2.png" id="RFn-ag-4B4">
+                                        <rect key="frame" x="543" y="59" width="466" height="359"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic3.png" id="9Gq-vB-dX0">
+                                        <rect key="frame" x="5" y="419" width="394" height="304"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic4.png" id="VXk-qw-ZqO">
+                                        <rect key="frame" x="407" y="419" width="189" height="304"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="comic5.png" id="nb5-D3-G2D">
+                                        <rect key="frame" x="593" y="422" width="416" height="298"/>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4by-vF-w4y">
+                                        <rect key="frame" x="342" y="326" width="375" height="192"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="  Jatka  " backgroundImage="comic-continue.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -607,50 +635,14 @@ Aloita seikkailu Jamaikalta!</string>
                                             <action selector="finishComic:" destination="MQ6-RG-LLQ" eventType="touchUpInside" id="D6t-at-oD4"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dcS-gz-8WL">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="F57-WU-uaA"/>
-                                            <constraint firstAttribute="width" constant="240" id="PpZ-7l-DGy"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" id="dcS-gz-8WL">
+                                        <rect key="frame" x="10" y="10" width="240" height="128"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="0st-cI-I3S" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="4" id="33L-Oz-q1a"/>
-                                    <constraint firstItem="nb5-D3-G2D" firstAttribute="trailing" secondItem="RFn-ag-4B4" secondAttribute="trailing" type="default" id="5Ql-G4-iti"/>
-                                    <constraint firstItem="4by-vF-w4y" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="326" id="9W4-IJ-TOi"/>
-                                    <constraint firstItem="VkX-OJ-1Ex" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" type="default" id="FaQ-er-pHt"/>
-                                    <constraint firstItem="9Gq-vB-dX0" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LJw-jM-1Yt"/>
-                                    <constraint firstItem="dcS-gz-8WL" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="10" id="O9B-Sx-d6e"/>
-                                    <constraint firstItem="VXk-qw-ZqO" firstAttribute="leading" secondItem="9Gq-vB-dX0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Z3Q-Iv-DwS"/>
-                                    <constraint firstAttribute="trailing" secondItem="RFn-ag-4B4" secondAttribute="trailing" constant="15" id="asz-Qx-mA7"/>
-                                    <constraint firstItem="nb5-D3-G2D" firstAttribute="centerY" secondItem="VXk-qw-ZqO" secondAttribute="centerY" type="default" id="f9E-Qa-IU5"/>
-                                    <constraint firstItem="VXk-qw-ZqO" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gQd-OX-ukC"/>
-                                    <constraint firstItem="9Gq-vB-dX0" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="5" id="iLp-bm-DYm"/>
-                                    <constraint firstItem="VkX-OJ-1Ex" firstAttribute="bottom" secondItem="cjx-cF-JZK" secondAttribute="bottom" type="default" id="ia8-aW-XZg"/>
-                                    <constraint firstItem="VkX-OJ-1Ex" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" type="default" id="l1I-9a-Rr3"/>
-                                    <constraint firstItem="4by-vF-w4y" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="342" id="laX-Ka-fR2"/>
-                                    <constraint firstItem="RFn-ag-4B4" firstAttribute="top" secondItem="0st-cI-I3S" secondAttribute="top" type="default" id="lrC-3y-gj3"/>
-                                    <constraint firstItem="dcS-gz-8WL" firstAttribute="leading" secondItem="cjx-cF-JZK" secondAttribute="leading" constant="10" id="s0C-r3-qgQ"/>
-                                    <constraint firstItem="0st-cI-I3S" firstAttribute="top" secondItem="cjx-cF-JZK" secondAttribute="top" constant="59" id="xeO-8i-Rbh"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <constraints>
-                            <constraint firstItem="cjx-cF-JZK" firstAttribute="trailing" secondItem="l9j-mz-9j9" secondAttribute="trailing" type="default" id="2hh-BG-Rxv"/>
-                            <constraint firstItem="Pla-jY-T4a" firstAttribute="leading" secondItem="l9j-mz-9j9" secondAttribute="leading" type="default" id="D5H-Rf-mS3"/>
-                            <constraint firstItem="cjx-cF-JZK" firstAttribute="leading" secondItem="l9j-mz-9j9" secondAttribute="leading" type="default" id="GM6-3F-0J6"/>
-                            <constraint firstItem="Pla-jY-T4a" firstAttribute="top" secondItem="l9j-mz-9j9" secondAttribute="top" type="default" id="JSx-Ep-sa6"/>
-                            <constraint firstItem="cjx-cF-JZK" firstAttribute="bottom" secondItem="l9j-mz-9j9" secondAttribute="bottom" type="default" id="LtW-Rp-XFb"/>
-                            <constraint firstItem="hZ7-s9-Zbn" firstAttribute="bottom" secondItem="l9j-mz-9j9" secondAttribute="bottom" type="default" id="aZg-2H-fqp"/>
-                            <constraint firstItem="hZ7-s9-Zbn" firstAttribute="leading" secondItem="l9j-mz-9j9" secondAttribute="leading" constant="263" id="f8F-22-ycP"/>
-                            <constraint firstItem="hZ7-s9-Zbn" firstAttribute="trailing" secondItem="l9j-mz-9j9" secondAttribute="trailing" type="default" id="gc0-8H-O7m"/>
-                            <constraint firstItem="hZ7-s9-Zbn" firstAttribute="top" secondItem="l9j-mz-9j9" secondAttribute="top" type="default" id="hYr-hg-gP9"/>
-                            <constraint firstItem="cjx-cF-JZK" firstAttribute="top" secondItem="l9j-mz-9j9" secondAttribute="top" type="default" id="i6L-r8-WUG"/>
-                            <constraint firstAttribute="bottom" secondItem="Pla-jY-T4a" secondAttribute="bottom" constant="-52" id="rEn-Re-kPA"/>
-                            <constraint firstAttribute="trailing" secondItem="Pla-jY-T4a" secondAttribute="trailing" constant="704" id="zaX-fc-vFt"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="2cg-Fn-HjI"/>
@@ -674,6 +666,19 @@ Aloita seikkailu Jamaikalta!</string>
                         <outlet property="continueButton" destination="hHz-UR-Sev" id="Cs7-j1-u9u"/>
                         <outlet property="islandImage" destination="dDZ-Qz-fff" id="YSc-3N-N3C"/>
                         <outlet property="mainView" destination="hZ7-s9-Zbn" id="hbC-Ke-dcJ"/>
+                        <outlet property="mapLine1" destination="k7N-rg-fvW" id="3yu-gf-7xU"/>
+                        <outlet property="mapLine2" destination="T7B-hQ-p3E" id="PEI-l8-mwx"/>
+                        <outlet property="mapLine3" destination="1JU-nl-rmQ" id="6j5-7f-zVZ"/>
+                        <outlet property="mapLine4" destination="Ot2-6a-pon" id="tTU-hG-bAy"/>
+                        <outlet property="mapLine5" destination="KMl-pv-oWx" id="4Ge-sl-7LD"/>
+                        <outlet property="mapLine6" destination="bFP-G8-9kO" id="S9X-sw-g1n"/>
+                        <outlet property="mapPointButton1" destination="SjT-lh-2pw" id="cWn-eW-A1i"/>
+                        <outlet property="mapPointButton2" destination="gSF-8w-XW6" id="98b-g3-pRm"/>
+                        <outlet property="mapPointButton3" destination="TT5-Qk-Aif" id="wwL-5s-YP1"/>
+                        <outlet property="mapPointButton4" destination="nn2-iO-1PI" id="U6n-yL-uLy"/>
+                        <outlet property="mapPointButton5" destination="x6r-ip-zOf" id="yPy-SG-2Dk"/>
+                        <outlet property="mapPointButton6" destination="qpF-Ie-qcd" id="Egm-P3-6yc"/>
+                        <outlet property="mapPointButton7" destination="MM2-U1-GRV" id="WX4-Gb-2Sr"/>
                         <outlet property="menuButton" destination="bG8-zB-LuX" id="l7S-NT-DeZ"/>
                         <outlet property="portImage" destination="bXn-nY-rr0" id="JTU-v7-bM8"/>
                         <outlet property="questionCatLabel" destination="UJ4-ga-Vob" id="hse-ra-uEt"/>
@@ -685,7 +690,7 @@ Aloita seikkailu Jamaikalta!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYT-6L-ME3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="173"/>
+            <point key="canvasLocation" x="973" y="-595"/>
         </scene>
         <!--Diploma View Controller-->
         <scene sceneID="JjT-nf-j9S">
@@ -695,23 +700,17 @@ Aloita seikkailu Jamaikalta!</string>
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="RQG-h4-tTe"/>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="diploma-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-Qx-mhF">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1017" id="hXM-Wj-Xlp"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="background.png" id="RQG-h4-tTe">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FdK-fL-bPh">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="EtQ-6l-lCA"/>
-                                    <constraint firstAttribute="width" constant="240" id="NSv-DI-Rjc"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="diploma-bg.png" id="ZSx-Qx-mhF">
+                                <rect key="frame" x="3" y="20" width="1017" height="712"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ8-8X-ZDS">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="117" id="06b-z2-SEW"/>
-                                    <constraint firstAttribute="height" constant="54" id="kqN-Pr-oz8"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="coco-logo.png" id="FdK-fL-bPh">
+                                <rect key="frame" x="10" y="10" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eZ8-8X-ZDS">
+                                <rect key="frame" x="145" y="660" width="117" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back" backgroundImage="diploma-button-bg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -721,22 +720,11 @@ Aloita seikkailu Jamaikalta!</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="modal" modalTransitionStyle="crossDissolve" id="K3c-qD-6x4"/>
+                                    <action selector="closeDiplomaView:" destination="2Z0-qP-M19" eventType="touchUpInside" id="Uum-Sw-GwE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZSx-Qx-mhF" firstAttribute="top" secondItem="6nc-O8-2RH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8QK-X1-Dpo"/>
-                            <constraint firstItem="RQG-h4-tTe" firstAttribute="leading" secondItem="6nc-O8-2RH" secondAttribute="leading" type="default" id="Bfr-7N-srz"/>
-                            <constraint firstItem="eZ8-8X-ZDS" firstAttribute="leading" secondItem="6nc-O8-2RH" secondAttribute="leading" constant="145" id="MCq-le-tHg"/>
-                            <constraint firstAttribute="bottom" secondItem="eZ8-8X-ZDS" secondAttribute="bottom" constant="34" id="bhT-ry-G7d"/>
-                            <constraint firstItem="FdK-fL-bPh" firstAttribute="leading" secondItem="6nc-O8-2RH" secondAttribute="leading" constant="10" id="e0I-OM-YX6"/>
-                            <constraint firstItem="RQG-h4-tTe" firstAttribute="bottom" secondItem="6nc-O8-2RH" secondAttribute="bottom" type="default" id="kgO-Mf-T1R"/>
-                            <constraint firstItem="RQG-h4-tTe" firstAttribute="top" secondItem="6nc-O8-2RH" secondAttribute="top" type="default" id="la2-GQ-ecN"/>
-                            <constraint firstItem="ZSx-Qx-mhF" firstAttribute="leading" secondItem="6nc-O8-2RH" secondAttribute="leading" constant="3" id="n5m-si-W4L"/>
-                            <constraint firstItem="FdK-fL-bPh" firstAttribute="top" secondItem="6nc-O8-2RH" secondAttribute="top" constant="10" id="uO0-xC-f4P"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="peG-Wn-HX7"/>
@@ -746,8 +734,17 @@ Aloita seikkailu Jamaikalta!</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4o-3T-nPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-map.png" id="OYH-2h-nTU">
+                    <rect key="frame" x="0.0" y="0.0" width="63" height="64"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-flag.png" id="WTf-Oj-geS">
+                    <rect key="frame" x="0.0" y="0.0" width="61" height="63"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-boat.png" id="Vuw-cd-CNT">
+                    <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                </imageView>
             </objects>
-            <point key="canvasLocation" x="1034" y="1165"/>
+            <point key="canvasLocation" x="973" y="381"/>
         </scene>
     </scenes>
     <resources>
@@ -765,10 +762,23 @@ Aloita seikkailu Jamaikalta!</string>
         <image name="diploma-button-behind.png" width="432" height="171"/>
         <image name="diploma-button-bg.png" width="347" height="116"/>
         <image name="flag1.png" width="328" height="60"/>
+        <image name="icon-boat.png" width="62" height="62"/>
+        <image name="icon-boat3.png" width="63" height="64"/>
+        <image name="icon-flag.png" width="61" height="63"/>
+        <image name="icon-flag2.png" width="63" height="63"/>
+        <image name="icon-flag3.png" width="61" height="63"/>
+        <image name="icon-flag4.png" width="65" height="66"/>
+        <image name="icon-map.png" width="63" height="64"/>
+        <image name="icon-treasure.png" width="64" height="64"/>
         <image name="info-bg.png" width="717" height="532"/>
         <image name="main-level-bg.png" width="269" height="476"/>
         <image name="main-level-closed.png" width="253" height="181"/>
+        <image name="map-line.png" width="100" height="6"/>
+        <image name="map-point.png" width="36" height="36"/>
         <image name="menu-level1-bg.png" width="199" height="169"/>
+        <image name="menu-level2-bg.png" width="189" height="163"/>
+        <image name="menu-level3-bg.png" width="168" height="175"/>
+        <image name="menu-level4-bg.png" width="195" height="177"/>
         <image name="play-button.png" width="89" height="89"/>
         <image name="right-badge.png" width="50" height="51"/>
         <image name="round-button-behind.png" width="119" height="151"/>
@@ -782,6 +792,7 @@ Aloita seikkailu Jamaikalta!</string>
         <class className="FFADiplomaViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FFADiplomaViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closeDiplomaView:"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -793,6 +804,7 @@ Aloita seikkailu Jamaikalta!</string>
                 <relationship kind="action" name="answeredN3:"/>
                 <relationship kind="action" name="answeredN4:"/>
                 <relationship kind="action" name="answeredN5:"/>
+                <relationship kind="action" name="closeGameField:"/>
                 <relationship kind="action" name="continueAfterQuestion:"/>
                 <relationship kind="action" name="finishComic:"/>
                 <relationship kind="outlet" name="answer1Button" candidateClass="UIButton"/>
@@ -814,6 +826,19 @@ Aloita seikkailu Jamaikalta!</string>
                 <relationship kind="outlet" name="infoView2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="islandImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapLine1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLine2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLine3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLine4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLine5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapLine6" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapPointButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton6" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapPointButton7" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="menuButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="portImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="questionCatLabel" candidateClass="UILabel"/>
@@ -826,11 +851,12 @@ Aloita seikkailu Jamaikalta!</string>
         <class className="FFAStartViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAStartViewController.h"/>
             <relationships>
-                <relationship kind="action" name="hideInfoScreen:"/>
-                <relationship kind="action" name="resetGame:"/>
                 <relationship kind="action" name="shareApp:"/>
-                <relationship kind="action" name="showInfoScreen:"/>
                 <relationship kind="outlet" name="backButtonInfo" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="boatImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="boatImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="boatImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="boatImage4" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="flagImage1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="flagImage2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="flagImage3" candidateClass="UIImageView"/>
@@ -839,14 +865,18 @@ Aloita seikkailu Jamaikalta!</string>
                 <relationship kind="outlet" name="infoButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="infoScreen" candidateClass="UIView"/>
                 <relationship kind="outlet" name="infoText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="islandFourButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandButton3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="islandButton4" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="islandImage1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="islandImage2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="islandImage3" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="islandImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="islandOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="islandTwoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="landmapImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="landmapImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="landmapImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="landmapImage4" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="mainLabel1" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="mainLabel2" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="mainLabel3" candidateClass="UITextView"/>
@@ -856,15 +886,8 @@ Aloita seikkailu Jamaikalta!</string>
                 <relationship kind="outlet" name="playButtonImage3" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="playButtonImage4" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="rewardImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="rewardImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="rewardImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="rewardImage4" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -872,7 +895,4 @@ Aloita seikkailu Jamaikalta!</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="K3c-qD-6x4"/>
-    </inferredMetricsTieBreakers>
 </document>

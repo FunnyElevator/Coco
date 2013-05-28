@@ -20,6 +20,12 @@
 @synthesize currentQuestion;
 @synthesize answerValues;
 @synthesize deviceID;
+@synthesize pointsInLevel1;
+@synthesize pointsInLevel2;
+@synthesize pointsInLevel3;
+@synthesize pointsInLevel4;
+@synthesize boatPosX;
+@synthesize boatPosY;
 
 #pragma mark Singleton Methods
 
@@ -37,11 +43,27 @@
         name = @"Me";
         age = 0;
         gender = UnKnown;
+        
         unlockedLevelTwo = NO;
         unlockedLevelThree = NO;
         unlockedLevelFour = NO;
         unlockedDiploma = NO;
+         
+        /*
+        unlockedLevelTwo = YES;
+        unlockedLevelThree = YES;
+        unlockedLevelFour = YES;
+        unlockedDiploma = YES;
+        
+         */
+        pointsInLevel1 = 0;
+        pointsInLevel2 = 0;
+        pointsInLevel3 = 0;
+        pointsInLevel4 = 0;
         currentQuestion = 0;
+        boatPosX = 0.0;
+        boatPosY = 0.0;
+         
         answerValues = [[NSMutableArray alloc] init];
         
         CFUUIDRef newUniqueId = CFUUIDCreate(kCFAllocatorDefault);
@@ -52,9 +74,4 @@
     }
     return self;
 }
-
-- (void)dealloc {
-    // Should never be called, but just here for clarity really.
-}
-
 @end

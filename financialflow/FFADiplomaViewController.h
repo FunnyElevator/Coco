@@ -10,4 +10,6 @@
 
 @interface FFADiplomaViewController : UIViewController
 
+- (IBAction)closeDiplomaView:(id)sender;
+
 @end

@@ -10,6 +10,21 @@
 
 @interface FFAGameViewController ()
 
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton1;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton2;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton3;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton4;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton5;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton6;
+    @property (weak, nonatomic) IBOutlet UIButton *mapPointButton7;
+
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine1;
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine2;
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine3;
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine4;
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine5;
+@property (weak, nonatomic) IBOutlet UIImageView *mapLine6;
+    
 @end
 
 @implementation FFAGameViewController
@@ -44,7 +59,17 @@
     
     self.questionaireData = [NSMutableArray array];
     self.boatPosition = 180;
+    self.markerButtons = [NSMutableArray array];
+    [self.markerButtons addObject:self.mapPointButton1];
+    [self.markerButtons addObject:self.mapPointButton2];
+    [self.markerButtons addObject:self.mapPointButton3];
+    [self.markerButtons addObject:self.mapPointButton4];
+    [self.markerButtons addObject:self.mapPointButton5];
+    [self.markerButtons addObject:self.mapPointButton6];
+    [self.markerButtons addObject:self.mapPointButton7];
+
     
+    NSLog(@"MarkerArray count 1: %lu ", (unsigned long)[self.markerButtons count]);
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"questions_data" ofType:@"json"];
     NSError *error = nil;
@@ -106,6 +131,19 @@
     }
     [self setupGameField];
 }
+/*
++(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
+    NSData* data = [NSData dataWithContentsOfFile:filePath];
+    __autoreleasing NSError* error = nil;
+    id result = [NSJSONSerialization JSONObjectWithData:data
+                                                options:kNilOptions error:&error];
+    if (error != nil) return nil;
+    return result;
+}
+*/
+
+#pragma mark - Comic functions
 
 - (void)showComicstrip {
     comicButton.titleLabel.font = [UIFont fontWithName:@"Trade Winds" size:24];
@@ -182,44 +220,14 @@
     [self showQuestion];
 }
 
-- (IBAction)answeredN1:(id)sender {
-    [self questionAnsweredNumber:1];
-    
-    if ([self.currentQData.answer1Value intValue] < 10) {
-        [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
-    }
-}
-
-- (IBAction)answeredN2:(id)sender {
-    [self questionAnsweredNumber:2];
-    if ([self.currentQData.answer2Value intValue] < 10) {
-        [answer2Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
-    }
-}
-
-- (IBAction)answeredN3:(id)sender {
-    [self questionAnsweredNumber:3];
-    if ([self.currentQData.answer3Value intValue] < 10) {
-        [answer3Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
-    }
-}
-
-- (IBAction)answeredN4:(id)sender {
-    [self questionAnsweredNumber:4];
-    if ([self.currentQData.answer4Value intValue] < 10) {
-        [answer4Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
-    }
-}
-
-- (IBAction)answeredN5:(id)sender {
-    [self questionAnsweredNumber:5];
-    if ([self.currentQData.answer5Value intValue] < 10) {
-        [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
-    }
-}
+#pragma mark - Game field setup
 
 - (void)setupGameField {
+    [questionsView setHidden: NO];
+    [self disableMapPoints];
     FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    
+    //[boatView setCenter:CGPointMake(playerData.boatPosX, playerData.boatPosY)];
     
     if (playerData.currentQuestion<200) {
         [portImage setImage:[UIImage imageNamed:@"port1.png"]];
@@ -232,17 +240,61 @@
     }
 }
 
+- (IBAction)answeredN1:(id)sender {
+    [self questionAnsweredNumber:1 andQuestionValue:self.currentQData.answer1Value];
+    
+    if ([self.currentQData.answer1Value intValue] < 10) {
+        [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN2:(id)sender {
+    [self questionAnsweredNumber:2 andQuestionValue:self.currentQData.answer2Value];
+    if ([self.currentQData.answer2Value intValue] < 10) {
+        [answer2Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN3:(id)sender {
+    [self questionAnsweredNumber:3 andQuestionValue:self.currentQData.answer3Value];
+    if ([self.currentQData.answer3Value intValue] < 10) {
+        [answer3Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN4:(id)sender {
+    [self questionAnsweredNumber:4 andQuestionValue:self.currentQData.answer4Value];
+    if ([self.currentQData.answer4Value intValue] < 10) {
+        [answer4Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)answeredN5:(id)sender {
+    [self questionAnsweredNumber:5 andQuestionValue:self.currentQData.answer5Value];
+    if ([self.currentQData.answer5Value intValue] < 10) {
+        [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-wrong-button.png"] forState:UIControlStateNormal];
+    }
+}
+
+
+
+
+
 - (void)showQuestion {
     [self enableAllButtons];
     badgeRightImg.hidden = YES;
     badgeWrongImg.hidden = YES;
     continueButton.hidden = YES;
+    tipsView.translatesAutoresizingMaskIntoConstraints=YES;
     [UIView animateWithDuration:0.5f
                      animations:^{
                          [tipsView setCenter:CGPointMake(132, 888)];
                          [tipsView setAlpha:0.0f];
                      }];
-    
+    tipsTextLabel.translatesAutoresizingMaskIntoConstraints = YES;
+    CGRect frameLabel2 = tipsTextLabel.frame;
+    frameLabel2.size.height = 118;
+    tipsTextLabel.frame = frameLabel2;
     tipsTextLabel.font = [UIFont fontWithName:@"ArbutusSlab-Regular" size:14];
     FFAPlayer *playerData = [FFAPlayer sharedPlayer];
     for (int i=0; i< self.questionaireData.count; i++) {
@@ -277,27 +329,51 @@
 
 }
 
-- (void)questionAnsweredNumber:(int)answerNumber {
+- (void)questionAnsweredNumber:(int)answerNumber andQuestionValue:(NSNumber *)questionValue{
     [self disableAllButtons];
     continueButton.hidden = NO;
-    if ([self.currentQData.answer5Text isEqualToString:@""]) {
-        [UIView animateWithDuration:0.5f
-                         animations:^{
-                             [tipsView setCenter:CGPointMake(132, 628)];
-                             [tipsView setAlpha:1.0f];
-                         }];
+    FFAPlayer *playerData = [FFAPlayer sharedPlayer];
+    
+    // show tips
+    if ([self.currentQData.tip isEqualToString:@""]) {
+        // do nothing
     } else {
-        [UIView animateWithDuration:0.5f
-                         animations:^{
-                             [tipsView setCenter:CGPointMake(132, 718)];
-                             [tipsView setAlpha:1.0f];
-                         }];
+        if ([self.currentQData.answer5Text isEqualToString:@""]) {
+            tipsTextLabel.translatesAutoresizingMaskIntoConstraints = YES;
+            CGRect frameLabel2 = tipsTextLabel.frame;
+            frameLabel2.size.height += 90;
+            tipsTextLabel.frame = frameLabel2;
+            [UIView animateWithDuration:0.5f
+                             animations:^{
+                                 tipsView.translatesAutoresizingMaskIntoConstraints = YES;
+                                 [tipsView setCenter:CGPointMake(132, 628)];
+                                 [tipsView setAlpha:1.0f];
+                             }];
+            NSLog(@"TipsView Y Pos: %f", tipsView.frame.origin.y);
+        } else {
+            [UIView animateWithDuration:0.5f
+                             animations:^{
+                                 tipsView.translatesAutoresizingMaskIntoConstraints = YES;
+                                 [tipsView setCenter:CGPointMake(132, 718)];
+                                 [tipsView setAlpha:1.0f];
+                             }];
+        }
     }
-    self.boatPosition += 80;
+    
+    // move the boat
+    self.boatPosition += 70;
     [UIImageView animateWithDuration:1.0f
                      animations:^{
-                         [boatView setCenter:CGPointMake(self.boatPosition, 374)];
+                         CGFloat tempBoatYchange = ([questionValue floatValue]*3)-30.0;
+                         NSLog(@"boatMovement: %f", tempBoatYchange);
+                         
+                         [boatView setCenter:CGPointMake(self.boatPosition, boatView.center.y-tempBoatYchange)];
+                         
+                         playerData.boatPosX = boatView.center.x;
+                         playerData.boatPosY = boatView.center.y;
                      }];
+    
+    // colorize buttons
     if ([self.currentQData.answer1Value intValue] == 20) {
         [answer1Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
     }
@@ -314,8 +390,72 @@
         [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-right-button.png"] forState:UIControlStateNormal];
     }
     
-    // show result
-    //animate Screen
+    
+    
+    // draw map buttons
+    int tempQuestionID = [self.currentQData.idNumber intValue]-(100*[self.currentQData.idCategory intValue]);
+    
+    [[self.markerButtons objectAtIndex:tempQuestionID] setCenter:CGPointMake(85*(tempQuestionID+1), playerData.boatPosY+70)];
+    [UIButton animateWithDuration:0.5f
+                       animations:^{
+                           [[self.markerButtons objectAtIndex:tempQuestionID] setAlpha:1.0f];
+                       }];
+    
+    [[self.markerButtons objectAtIndex:tempQuestionID] setAlpha:1.0f];
+    
+        
+    // calculate game&level points
+    if (answerNumber == 1) {
+        if ([self.currentQData.idCategory intValue] == 1) {
+            playerData.pointsInLevel1 += [self.currentQData.answer1Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 2) {
+            playerData.pointsInLevel2 += [self.currentQData.answer1Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 3) {
+            playerData.pointsInLevel3 += [self.currentQData.answer1Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 4) {
+            playerData.pointsInLevel4 += [self.currentQData.answer1Value intValue];
+        }
+    }  else if (answerNumber == 2) {
+        if ([self.currentQData.idCategory intValue] == 1) {
+            playerData.pointsInLevel1 += [self.currentQData.answer2Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 2) {
+            playerData.pointsInLevel2 += [self.currentQData.answer2Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 3) {
+            playerData.pointsInLevel3 += [self.currentQData.answer2Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 4) {
+            playerData.pointsInLevel4 += [self.currentQData.answer2Value intValue];
+        }
+    } else if (answerNumber == 3) {
+        if ([self.currentQData.idCategory intValue] == 1) {
+            playerData.pointsInLevel1 += [self.currentQData.answer3Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 2) {
+            playerData.pointsInLevel2 += [self.currentQData.answer3Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 3) {
+            playerData.pointsInLevel3 += [self.currentQData.answer3Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 4) {
+            playerData.pointsInLevel4 += [self.currentQData.answer3Value intValue];
+        }
+    } else if (answerNumber == 4) {
+        if ([self.currentQData.idCategory intValue] == 1) {
+            playerData.pointsInLevel1 += [self.currentQData.answer4Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 2) {
+            playerData.pointsInLevel2 += [self.currentQData.answer4Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 3) {
+            playerData.pointsInLevel3 += [self.currentQData.answer4Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 4) {
+            playerData.pointsInLevel4 += [self.currentQData.answer4Value intValue];
+        }
+    } else if (answerNumber == 5) {
+        if ([self.currentQData.idCategory intValue] == 1) {
+            playerData.pointsInLevel1 += [self.currentQData.answer5Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 2) {
+            playerData.pointsInLevel2 += [self.currentQData.answer5Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 3) {
+            playerData.pointsInLevel3 += [self.currentQData.answer5Value intValue];
+        } else if ([self.currentQData.idCategory intValue] == 4) {
+            playerData.pointsInLevel4 += [self.currentQData.answer5Value intValue];
+        }
+    }
 }
 
 - (IBAction)continueAfterQuestion:(id)sender {
@@ -332,6 +472,29 @@
 
 - (void)showResultScreen {
     
+}
+- (void)disableMapPoints {
+    self.mapPointButton1.enabled = NO;
+    self.mapPointButton2.enabled = NO;
+    self.mapPointButton3.enabled = NO;
+    self.mapPointButton4.enabled = NO;
+    self.mapPointButton5.enabled = NO;
+    self.mapPointButton6.enabled = NO;
+    self.mapPointButton7.enabled = NO;
+    //self.mapPointButton1.alpha = 0.0f;
+    self.mapPointButton2.alpha = 0.0f;
+    self.mapPointButton3.alpha = 0.0f;
+    self.mapPointButton4.alpha = 0.0f;
+    self.mapPointButton5.alpha = 0.0f;
+    self.mapPointButton6.alpha = 0.0f;
+    self.mapPointButton7.alpha = 0.0f;
+    
+    self.mapLine1.alpha = 0.0f;
+    self.mapLine2.alpha = 0.0f;
+    self.mapLine3.alpha = 0.0f;
+    self.mapLine4.alpha = 0.0f;
+    self.mapLine5.alpha = 0.0f;
+    self.mapLine6.alpha = 0.0f;
 }
 
 - (void)disableAllButtons {
@@ -356,14 +519,16 @@
     [answer5Button setBackgroundImage:[UIImage imageNamed:@"answer-button-normal.png"] forState:UIControlStateNormal];
 }
 
-+(NSDictionary*)dictionaryWithContentsOfJSONString:(NSString*)fileLocation{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data
-                                                options:kNilOptions error:&error];
-    if (error != nil) return nil;
-    return result;
+
+
+
+
+#pragma mark - question answering
+
+#pragma mark - Quit game
+
+- (IBAction)closeGameField:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -371,11 +536,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - question answering
-
-
-
-
 
 @end

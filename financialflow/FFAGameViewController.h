@@ -46,6 +46,7 @@
 
 @property (strong) NSMutableArray *questionaireData;
 @property (strong) FFAQuestionData *currentQData;
+@property (strong) NSMutableArray *markerButtons;
 @property int boatPosition;
 
 - (IBAction)continueAfterQuestion:(id)sender;
@@ -56,4 +57,6 @@
 - (IBAction)answeredN3:(id)sender;
 - (IBAction)answeredN4:(id)sender;
 - (IBAction)answeredN5:(id)sender;
+
+- (IBAction)closeGameField:(id)sender;
 @end

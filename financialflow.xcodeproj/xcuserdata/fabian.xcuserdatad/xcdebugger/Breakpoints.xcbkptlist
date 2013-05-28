@@ -7,13 +7,78 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "financialflow/FFAGameViewController.m"
-         timestampString = "390388349.322213"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391353707.866351"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "284"
-         endingLineNumber = "284"
-         landmarkName = "-questionAnsweredNumber:"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
+         landmarkName = "-resetButtonTwo"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391353707.866351"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "185"
+         endingLineNumber = "185"
+         landmarkName = "-resetButtonThree"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391353707.866351"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "195"
+         endingLineNumber = "195"
+         landmarkName = "-resetButtonFour"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391364036.593986"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
+         landmarkName = "-unlockButtonThree"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391364036.593986"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
+         landmarkName = "-unlockButtonTwo"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAStartViewController.m"
+         timestampString = "391364036.593986"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "230"
+         endingLineNumber = "230"
+         landmarkName = "-unlockButtonFour"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,12 +86,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "financialflow/FFAGameViewController.m"
-         timestampString = "390391865.192616"
+         timestampString = "391442286.649971"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "290"
-         endingLineNumber = "290"
-         landmarkName = "-questionAnsweredNumber:"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAGameViewController.m"
+         timestampString = "391442286.649971"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "389"
+         endingLineNumber = "389"
+         landmarkName = "-questionAnsweredNumber:andQuestionValue:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "financialflow/FFAGameViewController.m"
+         timestampString = "391442286.649971"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "388"
+         endingLineNumber = "388"
+         landmarkName = "-questionAnsweredNumber:andQuestionValue:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
